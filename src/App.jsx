@@ -1,17 +1,27 @@
 
 import './App.css'
+import Banner from './Components/Banner/banner';
+
 
 function App() {
 
 
   return (
     <>
+
 <div className="container">
-  <div className="1st-Screen"></div>
-  <div className="2nd-Screen"></div>
-  <div className="choose"></div>  
-  <div className="buttons"></div>
-  <div className="footer">Footer</div>
+  <div className="banner"> text <Banner /> </div>
+  <div className="main">
+    {/* 
+    <div className="main-container">
+      <div className="button-mode"></div>
+      <div className="box1"></div>
+      <div className="box2"></div>
+      <div className="extra-buttons"></div>
+    </div>
+    */}
+  </div>
+  <div className="footer"></div>  
 </div>
     </>
   )
