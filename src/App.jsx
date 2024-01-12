@@ -8,9 +8,9 @@ function App() {
 
   return (
     <>
-
+<div className="banner"> <Banner /> </div>
 <div className="container">
-  <div className="banner"> text <Banner /> </div>
+  <div className="banner"> <Banner /> </div>
   <div className="main">
     {/* 
     <div className="main-container">
