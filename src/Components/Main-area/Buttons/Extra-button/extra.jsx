@@ -7,7 +7,7 @@ function extra() {
 
   return (
     <>
-<div className="button-extra">
+<div className="buttonBottomArea">
  
 </div>
     </>

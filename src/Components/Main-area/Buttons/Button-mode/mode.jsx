@@ -7,7 +7,7 @@ function mode() {
 
   return (
     <>
-<div className="button-mode">
+<div className="buttonTopArea">
  
 </div>
     </>
