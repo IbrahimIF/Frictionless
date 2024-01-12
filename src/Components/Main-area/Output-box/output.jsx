@@ -7,8 +7,8 @@ function output() {
 
   return (
     <>
-<div className="container">
- 
+<div className="output-box">
+<input  type="text"/>
 </div>
     </>
   )

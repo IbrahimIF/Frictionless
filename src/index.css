@@ -1,1 +1,19 @@
+/* include border and padding in element width and height */
+* {
+    box-sizing: border-box;
+  }
+  
 
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* hides a scroll bar if present */
+}
+
+
+.output-box, .input-box{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}

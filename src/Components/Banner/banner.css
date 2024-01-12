@@ -1,5 +1,9 @@
 .bannercss {
- width:100%;
- 
- 
+    position: fixed;
+
+    display: flex;
+    
+    height: 19%;
+    width: 100%;
+    
   }

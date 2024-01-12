@@ -7,7 +7,7 @@ function mode() {
 
   return (
     <>
-<div className="container">
+<div className="button-mode">
  
 </div>
     </>

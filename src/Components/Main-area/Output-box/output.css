@@ -1,0 +1,7 @@
+.output-box {
+    height: 100vh;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 10px;
+    width: 45%;
+}

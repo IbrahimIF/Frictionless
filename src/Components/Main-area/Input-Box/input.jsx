@@ -7,8 +7,8 @@ function input() {
 
   return (
     <>
-<div className="container">
- 
+<div className="input-box">
+<input type="text"/>
 </div>
     </>
   )
