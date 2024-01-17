@@ -1,13 +1,13 @@
 
 import './banner.css'
- import banner from '../../assets/Images/Frictionless Banner.png'
+ import Logo from '../../assets/Images/Frictionless Logo light.png'
 function Banner() {
 
 
   return (
     <>
 <div className="container">
-<img src={banner} className="bannercss" alt="banner" />
+<img src={Logo} className="bannercss" alt="LightLogo" />
 </div>
     </>
   )

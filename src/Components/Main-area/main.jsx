@@ -9,7 +9,6 @@ import Bellowbuttons from './Buttons/Extra-button/extra';
 
 function main() {
 
-
   return (
     <>
 <div className="mainArea">
