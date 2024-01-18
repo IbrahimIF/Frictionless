@@ -2,4 +2,12 @@
     justify-content: center;
     overflow: hidden;
     width: 50%;
+
+
+    border: none;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    box-sizing: border-box;
+
+    outline: 1px solid rgb(0, 0, 0);
 }
