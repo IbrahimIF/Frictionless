@@ -21,6 +21,23 @@ height: 100%;
     outline: 5px solid rgb(153, 187, 255);
 }
 
+.darkMode{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    position: absolute;
+    left: 130vh;
+    width: 56px;
+    height: 56px;
+
+    background-color: rgb(99, 99, 99);
+    border-radius: 50%;
+    border: 2px solid rgb(126, 126, 126);
+    box-shadow: 0px 0px 3px rgb(2, 2, 2) inset;
+}
+
+
 .buttonMode{
     display: inline-flex;
     align-items: center;
@@ -50,3 +67,5 @@ height: 100%;
     scale: 0.95;
   }
   
+
+
