@@ -6,8 +6,8 @@ function Banner() {
 
   return (
     <>
-<div className="container">
-<img src={Logo} className="bannercss" alt="LightLogo" />
+<div className="banner" >
+<img src={Logo} className="bannersize" alt="LightLogo" />
 </div>
     </>
   )

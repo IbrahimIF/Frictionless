@@ -1,20 +1,28 @@
 
 /*Containers*/
 .main-container{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-min-height: 100vh;
-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: center;
+  height: 80vh;
+  width: 100%;
+  background: linear-gradient(150deg, #1260F8 0%, #578FFA 0%, #FFF 20%);
 }
 
+.banner-container{
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: 14vh;
+}
 
 .middle-container{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
-  background: linear-gradient(150deg, #1260F8 0%, #578FFA 0%, #FFF 20%);
   width: 100%;
   height: 80vh;
 }
@@ -23,8 +31,9 @@ width: 100%;
 
 .footer-container{
   display: flex;
-  background-color: rgb(255, 255, 255);
+  flex-wrap: wrap;
+
   width: 100%;
-  outline: solid 3px black;
+  height: 20vh;
 }
 

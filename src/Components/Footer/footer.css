@@ -1,5 +1,22 @@
-.footer{
-
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 15vh;
+   }
+   
+   .footer-button-container {
+    position: absolute;
+    width: 50%;
+    height: 15vh;
+    outline: solid 3px rgb(179, 179, 179);
+    border-radius: 10px 10px 0 0;
+   }
+   
+   .footer-button {
     --color: #a5a5b0;
     --size: 30px;
     display: flex;
@@ -10,49 +27,46 @@
     font-size: var(--size);
     user-select: none;
     fill: var(--color);
-    
-}
 
-  
-  .container .chevron-down {
+    top: 30px;
+   }
+   
+   .footer-button .chevron-down {
     position: absolute;
     animation: keyframes-return .5s;
-  }
-  
-  /* ------ On check event ------ */
-  .container input:checked ~ .chevron-down {
+   }
+   
+   .footer-button input:checked ~ .chevron-down {
     animation: keyframes-rotate .5s;
     transform: rotate(180deg);
-  }
-  
-  /* ------ Hide the default checkbox ------ */
-  .container input {
+   }
+   
+   .footer-button input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
-  
-  /* ------ Animation ------ */
-  @keyframes keyframes-rotate {
-    0% {
-      transform: rotate(0deg);
-      opacity: 0;
+   }
+   
+   @keyframes keyframes-rotate {
+     0% {
+       transform: rotate(0deg);
+       opacity: 0;
     }
-  
-    100% {
-      transform: rotate(-180deg);
+   
+     100% {
+       transform: rotate(-180deg);
     }
-  }
-  
-  @keyframes keyframes-return {
-    0% {
-      transform: rotate(-180deg);
-      opacity: 0;
+   }
+   
+   @keyframes keyframes-return {
+     0% {
+       transform: rotate(-180deg);
+       opacity: 0;
     }
-  
-    100% {
-      transform: rotate(0deg);
+   
+     100% {
+       transform: rotate(0deg);
     }
-  }
+   }

@@ -14,9 +14,7 @@ function App() {
     <>
 <div className="main-container">
   <div className="banner-container"> <Banner /> </div>
-  <div className="middle-container">
-    <MainArea />
-  </div>
+  <div className="middle-container"> <MainArea /> </div>
   <div className="footer-container"> <Footer /> </div>
 </div>
     </>

@@ -1,0 +1,52 @@
+.buttonTopArea{
+display: flex;
+width: 100%;
+height: 100%;
+}
+
+
+.buttonModeArea{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    position: absolute;
+    width: 50%;
+    height: 5vh;
+    left: 50px;
+    top: 2px;
+
+    background-color: white;
+    border-radius: 3rem;
+    outline: 5px solid rgb(153, 187, 255);
+}
+
+.buttonMode{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    outline: 0;
+    transition: all  .2s ease;
+    text-decoration: none;
+}
+
+.buttonMode:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(22, 45, 255);
+    outline: 5px solid rgb(153, 187, 255);
+}
+
+.texts {
+    font-weight: 600;
+  }
+  
+
+  .buttonMode:active {
+    scale: 0.95;
+  }
+  

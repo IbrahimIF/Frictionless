@@ -1,6 +1,7 @@
 /* include border and padding in element width and height */
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
 

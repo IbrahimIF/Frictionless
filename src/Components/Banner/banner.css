@@ -1,9 +1,21 @@
-.bannercss {
-    position: fixed;
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+  }
+
+
+  .bannersize{
 
     display: flex;
-    
-    height: 19%;
-    left: 60vh;
-    
+    flex-wrap: wrap;
+
+    position: absolute;
+    height: 16vh;
+
   }
