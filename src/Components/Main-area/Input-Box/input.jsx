@@ -1,5 +1,5 @@
 
-import './input.css'
+
 
 function input() {
 
