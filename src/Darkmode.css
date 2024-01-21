@@ -1,0 +1,102 @@
+/*App.jsx file Darkmode*/
+
+.dark-mode .main-container{
+    background: linear-gradient(150deg, #2c6ae6 0%, #00256b 0%, #000000 20%);
+}
+
+
+.dark-mode .middle-container{
+    background-color: #000000;
+}
+
+.dark-mode .footer-container{
+    background-color: #000000;
+}
+
+/*main.jsx file Darkmode*/
+
+
+.dark-mode .mainArea{
+    background-color: rgb(26, 35, 54);
+    outline: 1px solid rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode .middleArea{
+
+    background-color: rgb(52, 52, 52);
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+.dark-mode .topButtonsArea{
+    background-color: rgb(0, 0, 0);
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+.dark-mode .bellowButtonsArea{
+    background-color: rgb(0, 0, 0);
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+/*input.jsx file Darkmode*/
+.dark-mode .input-box {
+    background-color: #636363;
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+/*output.jsx file Darkmode*/
+
+.dark-mode .output-box {
+    background-color: #636363;
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+
+
+
+/*button area top*/
+
+
+
+
+
+/*buttonsTop.jsx file Darkmode*/
+.dark-mode .buttonModeArea{
+    background-color: rgb(0, 0, 0);
+    outline: 5px solid rgb(33, 41, 58);
+}
+
+.dark-mode .buttonMode{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+.dark-mode .buttonMode:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(5, 12, 72);
+    outline: 5px solid rgb(54, 67, 94);
+}
+
+.dark-mode .texts {
+    color: white;
+}
+
+.dark-mode .buttonMode:active {
+    box-shadow: inset 0px 0.1em 0.6em #1b295f;
+}
+
+
+/*buttonsBottom.jsx file Darkmode*/
+
+
+/*footer.jsx file Darkmode*/
+
+.dark-mode .footer-button-container {
+    outline: solid 3px rgb(65, 65, 65);
+}
+
+.dark-mode .footer-button {
+    --color: #696970;
+}
+

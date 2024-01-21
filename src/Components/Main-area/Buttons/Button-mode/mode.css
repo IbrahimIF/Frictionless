@@ -1,7 +1,10 @@
+
+/*choose mode button css bellow*/
+
 .buttonTopArea{
-display: flex;
-width: 100%;
-height: 100%;
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -19,22 +22,6 @@ height: 100%;
     background-color: white;
     border-radius: 3rem;
     outline: 5px solid rgb(153, 187, 255);
-}
-
-.darkMode{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    position: absolute;
-    left: 130vh;
-    width: 56px;
-    height: 56px;
-
-    background-color: rgb(99, 99, 99);
-    border-radius: 50%;
-    border: 2px solid rgb(126, 126, 126);
-    box-shadow: 0px 0px 3px rgb(2, 2, 2) inset;
 }
 
 
@@ -60,12 +47,76 @@ height: 100%;
 
 .texts {
     font-weight: 600;
-  }
-  
+}
 
-  .buttonMode:active {
+
+.buttonMode:active {
     scale: 0.95;
-  }
-  
+    box-shadow: inset 0px 0.1em 0.6em #4c73ff;
+    transform: translateY(0em);
+}
 
 
+/*dark-mode button css bellow*/
+
+.container-dark input{
+    display: none;
+}
+
+.container-dark  {
+    display: flex;
+    flex-wrap: wrap;
+
+    position: absolute;
+    left: 687px;
+    width: 6%;
+    height: 5.5vh;
+}
+
+
+.darkMode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    background-image: linear-gradient(145deg, #ecebeb, #d0cbd3);
+    border: 4px solid #f0efef;
+    box-sizing: border-box;
+    box-shadow: inset 2px 2px 0 #aeacaf, inset -2px -2px 0px #dddddd;
+    background-color: transparent;
+}
+
+
+.darkMode::before {
+    position: absolute;
+    content: "";
+    width: 3rem;
+    height: 3rem;
+    border-radius: inherit;
+    background-color: transparent;
+    background-image: linear-gradient(145deg, #dfdede, #a7a6a6);
+    z-index: -1;
+    box-shadow: 11px 11px 22px #e2e2e2, -11px -11px 22px #bdbdbd;
+}
+
+#checkbox:checked + .darkMode {
+    box-shadow: inset -2px -2px 0 #5e5e5e,inset 2px 2px 0 #1c1c1c;
+    border: 4px solid rgba(77, 124, 255, 0.281);
+
+    background-image: linear-gradient(145deg, #171717, #444245);
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+#checkbox:checked + .darkMode::before {
+    background-image: linear-gradient(145deg, #262626, #606060);
+    z-index: -1;
+    box-shadow: 11px 11px 22px #141414, -11px -11px 22px #525252;
+}
