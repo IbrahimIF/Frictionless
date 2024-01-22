@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   
   justify-content: center;
-  height: 80vh;
+  height: 100%;
   width: 100%;
   background: linear-gradient(150deg, #1260F8 0%, #578FFA 0%, #FFF 20%);
 }

@@ -4,15 +4,6 @@
     background: linear-gradient(150deg, #2c6ae6 0%, #00256b 0%, #000000 20%);
 }
 
-
-.dark-mode .middle-container{
-    background-color: #000000;
-}
-
-.dark-mode .footer-container{
-    background-color: #000000;
-}
-
 /*main.jsx file Darkmode*/
 
 
@@ -99,4 +90,27 @@
 .dark-mode .footer-button {
     --color: #696970;
 }
+
+
+.dark-mode .button {
+    border: 2px solid #000000;
+    background-color: transparent;
+    color: #ffffff;
+}
+.dark-mode .button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+
+.dark-mode .check-button{
+    border: 2px solid #098e00;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-mode .check-button:hover{
+    color: #000000;
+}
+
+
 

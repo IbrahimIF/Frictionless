@@ -1,0 +1,47 @@
+.buttonBottomArea{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+.button, .check-button {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0.8em 1.75em;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .button:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+  }
+  
+  .button:active, .check-button:active {
+    scale: 0.95;
+  }
+
+
+
+.button{
+    border: 2px solid #ffffff;
+    background-color: transparent;
+}
+
+
+.check-button {
+    border: 2px solid #098e00;
+    background-color: #ffffff;
+}
+
+.check-button:hover {
+    background-color: rgb(18, 123, 0);
+    color: rgb(255, 255, 255);
+  }

@@ -29,6 +29,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     border-radius: 9999px;
     width: 30%;
     background-color: rgb(255, 255, 255);
@@ -68,9 +69,11 @@
     flex-wrap: wrap;
 
     position: absolute;
-    left: 687px;
+    left: 80%;
     width: 6%;
     height: 5.5vh;
+    top: 2px;
+    
 }
 
 
@@ -80,8 +83,8 @@
     justify-content: center;
 
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 47px;
+    height: 47px;
 
     border-radius: 50%;
     cursor: pointer;
@@ -92,7 +95,6 @@
     box-shadow: inset 2px 2px 0 #aeacaf, inset -2px -2px 0px #dddddd;
     background-color: transparent;
 }
-
 
 .darkMode::before {
     position: absolute;
@@ -119,4 +121,17 @@
     background-image: linear-gradient(145deg, #262626, #606060);
     z-index: -1;
     box-shadow: 11px 11px 22px #141414, -11px -11px 22px #525252;
+}
+
+
+.Sun{
+height: 20px;
+width: 20px;
+color: #000000;
+}
+
+.Moon{
+    height: 20px;
+    width: 20px;
+    color: #ffffff;
 }

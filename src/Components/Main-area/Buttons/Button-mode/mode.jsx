@@ -2,7 +2,9 @@
 import './mode.css';
 import '../../../../Darkmode.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon } from '@fortawesome/free-regular-svg-icons';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
+
 
 import ThemeContext from "../../../Contexts/ThemeContext";
 import { useContext, useEffect } from "react";
@@ -18,8 +20,8 @@ function mode() {
       document.body.classList.toggle("dark-mode", isDarkMode);
     }, [isDarkMode]);
 
-    const icons = isDarkMode ? faMoon : null;
-
+    const icons = isDarkMode ? faMoon : faSun;
+    const style = isDarkMode ? "Moon" : "Sun";
   return (
     <>
       <div className="buttonTopArea">
@@ -32,7 +34,7 @@ function mode() {
         <div className={`container-dark ${isDarkMode ? 'dark-mode' : ''}`}>
           <input id="checkbox" type="checkbox" checked={isDarkMode} onChange={() => setIsDarkMode(!isDarkMode)} className="darkmode" />
             <label className="darkMode" htmlFor="checkbox">
-              <FontAwesomeIcon icon={icons} />
+              <FontAwesomeIcon icon={icons} className={style} />
             </label>
         </div>
       </div>
