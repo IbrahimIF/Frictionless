@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
+import './footer.css';
 
-import './footer.css'
+function Footer({descriptionSectionRef}) {
+  const [checked, setChecked] = useState(false);
 
-function Footer() {
-
- const [checked, setChecked] = useState(false);
-
- const handleCheck = () => {
+  const handleCheck = () => {
     setChecked(!checked);
- }
 
- return (
+    if (!checked) {
+      // If the button is checked (scrolling down)
+      if (descriptionSectionRef.current) {
+        descriptionSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      // If the button is unchecked (scrolling up)
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  return (
     <>
-      <div className="footer">
+      <div className= "footer" >
         <div className="footer-button-container">
           <label className="footer-button">
             <input 
@@ -27,7 +35,7 @@ function Footer() {
         </div>
       </div>
     </>
- )
+  );
 }
 
-export default Footer
+export default Footer;

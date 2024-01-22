@@ -70,3 +70,11 @@
        transform: rotate(0deg);
     }
    }
+
+
+
+
+   .hidden-section {
+    height: 100vh;
+    display: none;
+  }

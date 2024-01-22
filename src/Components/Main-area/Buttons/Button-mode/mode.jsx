@@ -11,23 +11,22 @@ function mode() {
 
   // Theme context
   const { isDarkMode, setIsDarkMode} = useContext(ThemeContext);
-  const moon = faMoon
-  const icons = String;
+
 
     // Toggle dark mode
     useEffect(() => {
       document.body.classList.toggle("dark-mode", isDarkMode);
     }, [isDarkMode]);
 
-    {isDarkMode ? 'icons = moon' : 'icons = moon'}
+    const icons = isDarkMode ? faMoon : null;
 
   return (
     <>
       <div className="buttonTopArea">
         <div className="buttonModeArea">
-          <a className="buttonMode"><span class="texts"> Analyse </span></a>
-          <a className="buttonMode"><span class="texts"> Detect </span></a>
-          <a className="buttonMode"><span class="texts"> Improve </span></a>
+          <a className="buttonMode"><span className="texts"> Analyse </span></a>
+          <a className="buttonMode"><span className="texts"> Detect </span></a>
+          <a className="buttonMode"><span className="texts"> Improve </span></a>
         </div>
       
         <div className={`container-dark ${isDarkMode ? 'dark-mode' : ''}`}>
