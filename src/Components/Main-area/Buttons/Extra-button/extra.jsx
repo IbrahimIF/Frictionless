@@ -15,10 +15,10 @@ const { isDarkMode, setIsDarkMode} = useContext(ThemeContext);
   return (
     <>
 <div className="buttonBottomArea">
-<button class="button">Clear All <FontAwesomeIcon icon= {faXmark} /></button>
-<button class="button">Choose Language</button>
-<button class="button">Choose Theme</button>
-<button class="check-button">Check</button>
+<button className="button">Clear All <FontAwesomeIcon icon= {faXmark} /></button>
+<button className="button">Choose Language</button>
+<button className="button">Choose Theme</button>
+<button className="check-button">Check</button>
 </div>
     </>
   )
