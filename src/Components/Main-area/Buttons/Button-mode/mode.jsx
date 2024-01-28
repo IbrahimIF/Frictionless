@@ -7,12 +7,14 @@ import { faSun } from '@fortawesome/free-solid-svg-icons';
 
 
 import ThemeContext from "../../../Contexts/ThemeContext";
-import { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 function mode() {
 
   // Theme context
   const { isDarkMode, setIsDarkMode} = useContext(ThemeContext);
+  const [activeButton, setActiveButton] = React.useState(null); // State to track the active button
+
 
 
     // Toggle dark mode
@@ -22,13 +24,18 @@ function mode() {
 
     const icons = isDarkMode ? faMoon : faSun;
     const style = isDarkMode ? "Moon" : "Sun";
+
+    const handleButtonClick = (buttonName) => {
+      setActiveButton(buttonName);
+    };
+
   return (
     <>
       <div className="buttonTopArea">
         <div className="buttonModeArea">
-          <a className="buttonMode"><span className="texts"> Analyse </span></a>
-          <a className="buttonMode"><span className="texts"> Detect </span></a>
-          <a className="buttonMode"><span className="texts"> Improve </span></a>
+        <a className={`buttonMode ${activeButton === "Analyse" ? "active" : ""}`} id="btnAnalyse" onClick={() => handleButtonClick("Analyse")}><span className="texts"> Analyse </span></a>
+          <a className={`buttonMode ${activeButton === "Detect" ? "active" : ""}`} id="btnDetect" onClick={() => handleButtonClick("Detect")}><span className="texts"> Detect </span></a>
+          <a className={`buttonMode ${activeButton === "Improve" ? "active" : ""}`} id="btnImprove" onClick={() => handleButtonClick("Improve")}><span className="texts"> Improve </span></a>
         </div>
       
         <div className={`container-dark ${isDarkMode ? 'dark-mode' : ''}`}>

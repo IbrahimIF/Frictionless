@@ -10,7 +10,7 @@
     left:10%;
     width: 80%;
 
-    background-color: rgb(153, 187, 255);
+    background: linear-gradient(100deg, #71E8FC 0%, #6BA8F4 25%, #637FE7 50%, #6455F0 75%);
     border-radius: 1rem;
     outline: 1px solid rgb(0, 0, 0);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -25,8 +25,8 @@
     justify-content: center;
 
     position: relative;
-    height: 95%;
-    width: 98%;
+    height: 97.7%;
+    width: 98.5%;
 
     background-color: rgb(183, 183, 183);
     border-radius: 0.375rem;

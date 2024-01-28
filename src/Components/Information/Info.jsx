@@ -18,6 +18,9 @@ function mode() {
     <>
       <div className="InfoArea">
       <h2>Description Sections</h2>
+      <div className="g">
+    <div>bla</div>
+</div>
 {/* Add content for the description section here */}
 <div><span>text</span><span /></div>
       </div>

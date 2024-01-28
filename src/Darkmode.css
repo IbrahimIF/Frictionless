@@ -9,37 +9,37 @@
 
 .dark-mode .mainArea{
     background-color: rgb(26, 35, 54);
-    outline: 1px solid rgb(255, 255, 255);
-    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+    outline: 1px solid rgb(0, 0, 0);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .dark-mode .middleArea{
 
     background-color: rgb(52, 52, 52);
-    outline: 1px solid rgb(255, 255, 255);
+    outline: 1px solid rgb(0, 0, 0);
 }
 
 .dark-mode .topButtonsArea{
     background-color: rgb(0, 0, 0);
-    outline: 1px solid rgb(255, 255, 255);
+    outline: 1px solid rgb(0, 0, 0);
 }
 
 .dark-mode .bellowButtonsArea{
     background-color: rgb(0, 0, 0);
-    outline: 1px solid rgb(255, 255, 255);
+    outline: 1px solid rgb(0, 0, 0);
 }
 
 /*input.jsx file Darkmode*/
 .dark-mode .input-box {
     background-color: #636363;
-    outline: 1px solid rgb(255, 255, 255);
+    outline: 1px solid rgb(0, 0, 0);
 }
 
 /*output.jsx file Darkmode*/
 
 .dark-mode .output-box {
     background-color: #636363;
-    outline: 1px solid rgb(255, 255, 255);
+    outline: 1px solid rgb(0, 0, 0);
 }
 
 
@@ -54,7 +54,7 @@
 /*buttonsTop.jsx file Darkmode*/
 .dark-mode .buttonModeArea{
     background-color: rgb(0, 0, 0);
-    outline: 5px solid rgb(33, 41, 58);
+    outline: 2.3px solid #6BA8F4;
 }
 
 .dark-mode .buttonMode{
@@ -66,16 +66,21 @@
 .dark-mode .buttonMode:hover {
     color: rgb(0, 0, 0);
     background-color: rgb(5, 12, 72);
-    outline: 5px solid rgb(54, 67, 94);
+    outline: 3px solid rgb(54, 67, 94);
 }
 
 .dark-mode .texts {
     color: white;
 }
 
-.dark-mode .buttonMode:active {
-    box-shadow: inset 0px 0.1em 0.6em #1b295f;
+.dark-mode .buttonMode.active {
+    /* Styles for the active button */
+    color: rgb(0, 0, 0);
+    background-color: #3729cdbf;
+    outline: 2px solid #3960ed;
 }
+
+
 
 
 /*buttonsBottom.jsx file Darkmode*/
@@ -84,12 +89,10 @@
 /*footer.jsx file Darkmode*/
 
 .dark-mode .footer-button-container {
-    outline: solid 3px rgb(65, 65, 65);
+    outline: solid 3px rgb(0, 0, 0);
 }
 
-.dark-mode .footer-button {
-    --color: #696970;
-}
+
 
 
 .dark-mode .button {

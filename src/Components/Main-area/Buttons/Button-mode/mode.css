@@ -17,11 +17,12 @@
     width: 50%;
     height: 5vh;
     left: 50px;
-    top: 2px;
+    top: 4px;
 
     background-color: white;
     border-radius: 3rem;
-    outline: 5px solid rgb(153, 187, 255);
+    outline: 2.3px solid  #6BA8F4;
+
 }
 
 
@@ -42,8 +43,9 @@
 
 .buttonMode:hover {
     color: rgb(255, 255, 255);
-    background-color: rgb(22, 45, 255);
-    outline: 5px solid rgb(153, 187, 255);
+
+    background: linear-gradient(150deg, #2c6ae6 0%, #00256b 0%, #000000 20%);
+    outline: 3px solid #1c4dff;
 }
 
 .texts {
@@ -55,6 +57,14 @@
     scale: 0.95;
     box-shadow: inset 0px 0.1em 0.6em #4c73ff;
     transform: translateY(0em);
+
+}
+
+.buttonMode.active {
+    /* Styles for the active button */
+    color: rgb(255, 255, 255);
+    background-color: #3927febf;
+    outline: 2px solid #1c4dff;
 }
 
 
