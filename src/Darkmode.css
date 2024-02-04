@@ -117,3 +117,18 @@
 
 
 
+
+
+
+.dark-mode .check-button span:last-child {
+    color: #000000;
+  }
+
+
+.dark-mode .check-button:focus {
+    background: radial-gradient(100% 100% at 100% 0%, #ffffff 0%, #ffffff 100% );
+  }
+
+.dark-mode .check-button:focus:end {
+    background-color: #000000;
+  }

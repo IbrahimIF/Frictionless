@@ -7,16 +7,17 @@
 
 
 
-
-
-
 .button, .check-button {
     cursor: pointer;
     transition: all 0.2s ease;
-    padding: 0.8em 1.75em;
+    height: 100%;
+    width: 200px;
     border-radius: 0.5rem;
     font-size: 0.75rem;
     font-weight: 600;
+
+    overflow: hidden;
+    transition-duration: 700ms;
   }
   
   .button:hover{
@@ -36,12 +37,107 @@
 }
 
 
+
+
+
+
+.dropdown-content {
+  flex-direction: column;
+  align-items: stretch;
+  font-size: 13px;
+  position: absolute;
+height: 120px;
+overflow:auto;
+
+
+  background-color: #000000;
+  border: 2px solid transparent;
+  border-image: linear-gradient(100deg, #71E8FC 0%, #6BA8F4 25%, #637FE7 50%, #6455F0 75%) 1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+
+.dropdown {
+  color: #ffffff;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: 0.4s;
+  background-color: #000000;
+}
+
+ .dropdown:hover {
+  background-color: #ffffff;
+  color: #212121;
+}
+
+.dropdown:focus {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+
+
+
 .check-button {
     border: 2px solid #098e00;
-    background-color: #ffffff;
+    background: radial-gradient(100% 100% at 100% 0%, #21c915 0%, #098e00 100%);
+    width: 80px;
+    transition-duration: 900ms;
 }
 
 .check-button:hover {
-    background-color: rgb(18, 123, 0);
+  background: radial-gradient(100% 100% at 100% 0%, #098e00 0%, #21c915 100% );
     color: rgb(255, 255, 255);
+  }
+
+
+
+
+
+
+  .check-button span:first-child {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  .check-button span:last-child {
+    position: absolute;
+    color: #b5ccf3;
+    opacity: 0;
+    transform: translateY(100%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+    
+  }
+  
+  .check-button:focus {
+    transition-delay: 100ms;
+    transition-duration: 500ms;
+    background: radial-gradient(100% 100% at 100% 0%, #000000 0%, #000000 100% );
+    
+  }
+  
+  .check-button:focus span:first-child {
+    color: #b5ccf3;
+    transform: translateX(-50%) translateY(-150%);
+    opacity: 0;
+    transition-duration: 500ms;
+    
+  }
+  
+  .check-button:focus span:last-child {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+    transition-delay: 300ms;
+    transition-duration: 500ms;
+    
+  }
+  
+  .check-button:focus:end {
+    background-color: #ffffff;
+    transition-duration: 900ms;
+    
   }
