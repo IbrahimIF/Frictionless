@@ -2,11 +2,7 @@
 
 }
 
-
-.g {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.33, rgb(14,173,173)), color-stop(0.67, rgb(0,255,255)));
-    background-image: -moz-linear-gradient(center bottom, rgb(14,173,173) 33%, rgb(0,255,255) 67% );
-    padding: 2px;
-    }
-    
-    .g > div { background: #fff; }
+.Title{
+    color: rgb(0, 0, 0);
+    padding: 0px 60px;
+}

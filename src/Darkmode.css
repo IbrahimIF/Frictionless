@@ -45,6 +45,31 @@
 
 
 
+
+/*dropdown menu*/
+
+.dropdown-content {
+    background-color: #000000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+.dark-mode .dropdown {
+    color: #ffffff;
+    background-color: #000000;
+  }
+  
+.dark-mode  .dropdown:hover {
+    background-color: #ffffff;
+    color: #212121;
+  }
+  
+.dark-mode .dropdown:focus {
+    background-color: #212121;
+    color: #ffffff;
+  }
+
+
+
 /*button area top*/
 
 
@@ -131,4 +156,12 @@
 
 .dark-mode .check-button:focus:end {
     background-color: #000000;
+  }
+
+
+
+  /*info sectio*/
+
+  .dark-mode .Title{
+    color:white
   }
