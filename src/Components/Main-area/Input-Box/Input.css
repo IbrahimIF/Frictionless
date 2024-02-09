@@ -1,4 +1,5 @@
 .input-box {
+    display: flex;
     justify-content: center;
     overflow: hidden;
     width: 50%;
@@ -10,4 +11,15 @@
     box-sizing: border-box;
 
     outline: 1px solid rgb(0, 0, 0);
+}
+
+.CodeMirror{
+    display: flex;
+    height: 94%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.cm-editor{
+    width: 100%;
 }

@@ -1,11 +1,13 @@
 
 import './extra.css'
-import { useState } from "react";
+import ThemeContext from '../../../Contexts/ThemeContext';
+import { useState, useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark,faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 function extra() {
 // Theme context
+const { codeLanguage, codeTheme, setCodeTheme, setCodeLanguage } = useContext(ThemeContext);
 const [selectedLanguage, setSelectedLanguage] = useState('Choose Language');
 const [selectedTheme, setSelectedTheme] = useState('Choose Theme');
 
@@ -21,15 +23,13 @@ const toggleThemeDropdown = () => setThemeDropdownOpen(!themeDropdownOpen);
 <div className="buttonBottomArea">
   <button className="button">Clear All <FontAwesomeIcon icon= {faXmark} /></button>
   
-  <button className="button" onClick={toggleLanguageDropdown}>{selectedLanguage} <FontAwesomeIcon icon= {faCaretDown} />
+  <button className="button" onClick={toggleLanguageDropdown}>{codeLanguage} <FontAwesomeIcon icon= {faCaretDown} />
   {languageDropdownOpen && (
     <div className="dropdown-content" style={{ display: languageDropdownOpen ? 'flex' : 'none' }}>
-      <button className="dropdown" onClick={() => setSelectedLanguage('Javascript')}>Javascript</button>
-      <button className="dropdown" onClick={() => setSelectedLanguage('Java')}>Java</button>
-      <button className="dropdown" onClick={() => setSelectedLanguage('Typescript')}>Typescript</button>
-      <button className="dropdown" onClick={() => setSelectedLanguage('Python')}>Python</button>
-      <button className="dropdown" onClick={() => setSelectedLanguage('C#')}>C#</button>
-      <button className="dropdown" onClick={() => setSelectedLanguage('C++')}>C++</button>
+      <button className="dropdown" onClick={() => setCodeLanguage('Javascript')}>Javascript</button>
+      <button className="dropdown" onClick={() => setCodeLanguage('Java')}>Java</button>
+      <button className="dropdown" onClick={() => setCodeLanguage('HTML')}>HTML</button>
+      <button className="dropdown" onClick={() => setCodeLanguage('Python')}>Python</button>
     </div>
     )}
   </button>

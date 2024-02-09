@@ -15,16 +15,20 @@ import './Darkmode.css'
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem("isDarkMode") === "true");
+  const [codeTheme, setCodeTheme] = useState(localStorage.getItem("codeTheme") || 'white');
+  const [codeLanguage, setCodeLanguage] = useState(localStorage.getItem("codeLanguage") || 'javascript');
   const descriptionSectionRef = useRef(null);
 
   useEffect(() => {
     localStorage.setItem("isDarkMode", isDarkMode);
+    localStorage.setItem("codeTheme", codeTheme);
+    localStorage.setItem("codeLanguage", codeLanguage);
   }, [isDarkMode]);
   
 
   return (
     <>
-     <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode}}>
+     <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode,  codeTheme, setCodeTheme, codeLanguage, setCodeLanguage}}>
       <div className="main-container">
         <div className="banner-container"> <Banner /> </div>
         <div className="middle-container"> <MainArea /> </div>

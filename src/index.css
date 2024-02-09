@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden; /* hides a scroll bar if present */
+    cursor: url("/src/assets/Images/image.png") , auto;
 }
 
 
