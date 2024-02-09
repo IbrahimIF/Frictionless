@@ -15,7 +15,7 @@ import './Darkmode.css'
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem("isDarkMode") === "true");
-  const [codeTheme, setCodeTheme] = useState(localStorage.getItem("codeTheme") || 'white');
+  const [codeTheme, setCodeTheme] = useState(localStorage.getItem("codeTheme") || 'defaultTheme');
   const [codeLanguage, setCodeLanguage] = useState(localStorage.getItem("codeLanguage") || 'javascript');
   const descriptionSectionRef = useRef(null);
 
@@ -23,7 +23,7 @@ function App() {
     localStorage.setItem("isDarkMode", isDarkMode);
     localStorage.setItem("codeTheme", codeTheme);
     localStorage.setItem("codeLanguage", codeLanguage);
-  }, [isDarkMode]);
+  }, [isDarkMode, codeTheme, codeLanguage]);
   
 
   return (
