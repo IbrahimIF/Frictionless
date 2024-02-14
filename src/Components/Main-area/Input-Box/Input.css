@@ -22,4 +22,5 @@
 }
 .cm-editor{
     width: 100%;
+    overflow: hidden;
 }

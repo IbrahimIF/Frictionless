@@ -10,7 +10,6 @@ import { useContext, useEffect } from "react";
 
 function mode() {
 
-  // Theme context
   const { isDarkMode, setIsDarkMode} = useContext(ThemeContext);
   
 
