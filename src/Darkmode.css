@@ -162,6 +162,21 @@
 
   /*info sectio*/
 
-  .dark-mode .Title{
-    color:white
-  }
+.dark-mode .infoArea{
+    background: linear-gradient(0deg, #2c6ae6 0%, #00256b 0%, #000000 60%);
+}
+
+.dark-mode .textInfo{
+    color: aliceblue;
+}
+
+.dark-mode .analyseArea{
+    background: linear-gradient(0deg, #2c6ae6 0%, #00256b 0%, #000000 60%);
+}
+
+.dark-mode .detectArea{
+    background: linear-gradient(0deg, #2c6ae6 0%, #00256b 0%, #000000 60%);
+}
+.dark-mode .improveArea{
+    background: linear-gradient(0deg, #2c6ae6 0%, #00256b 0%, #000000 60%);
+}

@@ -4,78 +4,151 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    background: linear-gradient(0deg, #1260F8 0%, #78a6fc 0%, #FFF 60%);
 }
-.titleArea{
+
+.title {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-}
-.cardArea{
-    display:flex;
-}
-.Title{
+    align-content: center;
+    justify-content: center;
+    
+    position: absolute;
+    height: 12vh;
+    width: 100%;
     color: rgb(0, 0, 0);
     padding: 0px 60px;
 }
 
-.texts{
-    text-align-last: center;
-}
-
-
-.card {
-    width: 320px;
-    height: 350px;
-    padding: 20px;
-    color: white;
-    background: linear-gradient(#ffffff, #ececec) padding-box,
-                linear-gradient(145deg,  #71E8FC 0%, #6BA8F4 25%, #637FE7 50%, #6455F0 75%) border-box;
-    border: 2px solid transparent;
-    border-radius: 8px;
+.titleSize{
     display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    transform-origin: right bottom;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-.card .main-content {
-    flex: 1;
-}
-
-
-.second-content :before {
-    content: attr(name);
-    padding: 16px 24px;
-    top: 100%;
-    bottom: 0;
-    left: 0;
-    right: 1;
-    background: #2d2d2d;
-    transition: all 1s cubic-bezier(0.190, 1.000, 0.560, 1.000);
-    text-align: center;
-    text-decoration: none;
-    color: #ffffff;
-  }
-
-.second-content:after {
-    content: "";
+    flex-wrap: wrap;
     position: absolute;
-    top: 100%;
-    bottom: 0;
-    left: 1;
-    padding-left: 330px;
-    right: 0;
-    transition: all 500ms cubic-bezier(0.190, 1.000, 0.560, 1.000);
+    height: 12vh;
 }
 
-.second-content:hover:after {
-    top: 0;
+.textArea{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    top: 110px;
 }
 
-.second-content:after {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: aqua;
-    background-position: 40%;
+.textInfo{
+    display: flex;
+    text-align-last: center;
+    top: 100px;
+    color: rgb(0, 0, 0);
 }
+
+.belowArea{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 100%;
+    top:110px;
+}
+
+.leftArea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    height: 100%;
+    width: 30%;
+}
+
+
+.centralArea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    height: 100%;
+    width: 30%;
+}
+
+
+.rightArea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    height: 100%;
+    width: 30%;
+}
+
+.cubeSize{
+    height: 20vh;
+}
+.leftCube{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 26%;
+    width: 100%;
+    transform: rotate(40deg);
+}
+
+.centralCube{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 26%;
+    width: 100%;
+    transform: rotate(0deg);
+}
+
+
+.rightCube{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 26%;
+    width: 100%;
+    transform: rotate(-40deg);
+}
+
+
+.analyseArea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    height: 80%;
+    width: 100%;
+    background: linear-gradient(0deg, #1260F8 0%, #78a6fc 0%, #FFF 60%);
+    border: grey;
+    border-radius: 10px;
+}
+
+.detectArea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    height: 80%;
+    width: 100%;
+    background: linear-gradient(0deg, #1260F8 0%, #78a6fc 0%, #FFF 60%);
+    border: grey;
+    border-radius: 10px;
+}
+.improveArea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    height: 80%;
+    width: 100%;
+    background: linear-gradient(0deg, #1260F8 0%, #78a6fc 0%, #FFF 60%);
+    border: grey;
+    border-radius: 10px;
+}
+
