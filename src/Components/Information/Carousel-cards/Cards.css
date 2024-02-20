@@ -24,6 +24,24 @@
   }
   
 
+
+/*carousel*/
+
+.carousel .control-next.control-arrow:before {
+    content: '}';
+    font-size: 24px; /* Adjust the size as needed */
+    color: #fff; /* Arrow color */
+    border: none; /* Remove the border styles */
+}
+
+.carousel .control-prev.control-arrow:before {
+    content: '{';
+    font-size: 24px; /* Adjust the size as needed */
+    color: #fff; /* Arrow color */
+    border: none; /* Remove the border styles */
+}
+
+
 /*card*/
 
 
