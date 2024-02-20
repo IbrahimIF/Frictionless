@@ -16,7 +16,8 @@ import { abyss, androidstudio, andromeda, aura, bespin, copilot,githubLight, git
 
 
 function input() {
-  const { codeTheme, codeLanguage, isDarkMode } = useContext(ThemeContext);
+  const { codeTheme, codeLanguage, isDarkMode, clearCodeTrigger  } = useContext(ThemeContext);
+  const [code, setCode] = useState("type here (${codeLanguage}) ");
 
   
 
@@ -54,16 +55,27 @@ function input() {
   };
 
 
+  useEffect(() => {  // Update the initial value whenever the selected language changes
+    setCode(`type here (${codeLanguage})`);
+  }, [codeLanguage]);
+
+  useEffect(() => {
+    // Respond to the clear code trigger
+    setCode(`type here (${codeLanguage})`);
+  }, [clearCodeTrigger, codeLanguage]);
+
+
 
   return (
     <>
 <div className="input-box">
 <CodeMirror
-      value="type here"
+      value={code}
       className="CodeMirror"
       extensions={[getLanguageExtension(codeLanguage)]}
       theme={getTheme(codeTheme)}
       onChange={(value, viewUpdate) => {
+        setCode(value);
         console.log('value:', value);
       }}
     />

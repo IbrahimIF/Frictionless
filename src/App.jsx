@@ -17,7 +17,13 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem("isDarkMode") === "true");
   const [codeTheme, setCodeTheme] = useState(localStorage.getItem("codeTheme") || 'defaultTheme');
   const [codeLanguage, setCodeLanguage] = useState(localStorage.getItem("codeLanguage") || 'javascript');
+  const [clearCodeTrigger, setClearCodeTrigger] = useState(false);
   const descriptionSectionRef = useRef(null);
+
+
+  const clearCode = () => {
+    setClearCodeTrigger(prev => !prev); // Toggle to ensure a change even if called multiple times
+  };
 
   useEffect(() => {
     localStorage.setItem("isDarkMode", isDarkMode);
@@ -28,7 +34,7 @@ function App() {
 
   return (
     <>
-     <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode,  codeTheme, setCodeTheme, codeLanguage, setCodeLanguage}}>
+     <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode,  codeTheme, setCodeTheme, codeLanguage, setCodeLanguage, clearCode, clearCodeTrigger}}>
       <div className="main-container">
         <div className="banner-container"> <Banner /> </div>
         <div className="middle-container"> <MainArea /> </div>

@@ -7,7 +7,7 @@ import { faXmark,faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 function extra() {
 // Theme context
-const { codeLanguage, codeTheme, setCodeTheme, setCodeLanguage } = useContext(ThemeContext);
+const { codeLanguage, codeTheme, setCodeTheme, setCodeLanguage, clearCode } = useContext(ThemeContext);
 
 const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
 const [themeDropdownOpen, setThemeDropdownOpen] = useState(false);
@@ -19,7 +19,7 @@ const toggleThemeDropdown = () => setThemeDropdownOpen(!themeDropdownOpen);
   return (
     <>
 <div className="buttonBottomArea">
-  <button className="button">Clear All <FontAwesomeIcon icon= {faXmark} /></button>
+  <button className="button" onClick={clearCode} >Clear All <FontAwesomeIcon icon= {faXmark} /></button>
   
   <button className="button" onClick={toggleLanguageDropdown}>{codeLanguage} <FontAwesomeIcon icon= {faCaretDown} />
   {languageDropdownOpen && (
