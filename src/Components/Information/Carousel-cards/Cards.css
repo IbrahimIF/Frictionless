@@ -1,0 +1,148 @@
+.carousel-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    height: 50%;
+    width: 100%;
+}
+
+.carousel-root{
+    width: 100%;
+}
+
+
+.buttons {
+    cursor: pointer;
+  background-color: transparent;
+  border: 10px solid transparent;
+  }
+  
+  .hover {
+    background-color: transparent;
+    border: 10px solid transparent;
+  }
+  
+
+/*card*/
+
+
+
+.cardArea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    height: 48%;
+    width: 100%;
+}
+
+
+/*Card*/
+.card {
+    position: relative;
+    width: 190px;
+    height: 254px;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .card:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(180deg, #000000 0%, #000000 25%, #000000 75%);
+    border-radius: 8px;
+  }
+  
+  .card:after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160%;
+    top: -70px;
+    right: 0px;
+    bottom: 0px;
+    left: 10px;
+    background: linear-gradient(
+      90deg,
+      #71e8fc 0%,
+      #6ba8f4 25%,
+      #637fe7 50%,
+      #6455f0 75%
+    );
+    border-radius: 8px;
+    animation: rotation_481 5s infinite linear;
+    z-index: 0;
+  }
+  
+  @keyframes rotation_481 {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+  .card-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 96%;
+    height: 96%;
+    left: 2%;
+    top: 2%;
+    background: #3f3f3f;
+    background: linear-gradient(to top, #1d1d1d, #c0c0c0);
+    border-radius: 8px;
+    transition: 0.3s;
+    z-index: 5;
+  }
+  
+  .card-back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    left: 2%;
+    top: 2%;
+    width: 96%;
+    height: 96%;
+    background: linear-gradient(-45deg, #00a6ff 0%, #4800ff 100%);
+    color: #e8e8e8;
+    padding: 20px;
+    line-height: 1.5;
+    border-radius: 5px;
+    pointer-events: none;
+    transform: translateY(110%);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 8;
+  }
+  
+  .card .card-back .heading {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .card:hover .card-back {
+    transform: translateY(0);
+  }
+  
+  .card:hover .card-info {
+    transform: translateY(120%);
+  }
+  
+  .card:hover .card-info p {
+    opacity: 0;
+  }
+  

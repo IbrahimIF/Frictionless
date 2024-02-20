@@ -6,6 +6,10 @@ import '../../Darkmode.css';
 
 import LightLogo from '../../assets/Images/Frictionless Logo light.png';
 import DarkLogo from '../../assets/Images/Frictionless Logo dark.png';
+import LeftCard from './Carousel-cards/Card-Left';
+import CentralCard from './Carousel-cards/Card-Central';
+import RightCard from './Carousel-cards/Card-Right';
+
 
 import Cube from '../../assets/Images/3D Cube.png';
 
@@ -32,18 +36,21 @@ function mode() {
             <div className="leftCube"><img src={Cube} className="cubeSize" alt="3Dcube" /></div>
             <div className="analyseArea">
               <h1 className="textInfo">Analyse</h1>
+              <LeftCard/>
             </div>
           </div>
           <div className="centralArea">
             <div className="centralCube"><img src={Cube} className="cubeSize" alt="3Dcube" /></div>
             <div className="detectArea">
               <h1 className="textInfo">Detect</h1>
+              <CentralCard/>
             </div>
           </div>
           <div className="rightArea">
             <div className="rightCube"><img src={Cube} className="cubeSize" alt="3Dcube" /></div>
             <div className="improveArea">
-            <h1 className="textInfo">Improve</h1>
+              <h1 className="textInfo">Improve</h1>
+              <RightCard/>
             </div>
           </div>
         </div>

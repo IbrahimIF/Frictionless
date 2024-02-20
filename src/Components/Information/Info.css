@@ -39,7 +39,8 @@
 .textInfo{
     display: flex;
     text-align-last: center;
-    top: 100px;
+    position: relative;
+    height: 40px;
     color: rgb(0, 0, 0);
 }
 
