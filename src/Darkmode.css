@@ -8,14 +8,14 @@
 
 
 .dark-mode .mainArea{
-    background-color: rgb(26, 35, 54);
+    background-color: rgb(0, 0, 0);
     outline: 1px solid rgb(0, 0, 0);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .dark-mode .middleArea{
 
-    background-color: rgb(52, 52, 52);
+    background-color: rgb(0, 0, 0);
     outline: 1px solid rgb(0, 0, 0);
 }
 
@@ -31,14 +31,14 @@
 
 /*input.jsx file Darkmode*/
 .dark-mode .input-box {
-    background-color: #636363;
+    background-color: #000000;
     outline: 1px solid rgb(0, 0, 0);
 }
 
 /*output.jsx file Darkmode*/
 
 .dark-mode .output-box {
-    background-color: #636363;
+    background-color: #000000;
     outline: 1px solid rgb(0, 0, 0);
 }
 
@@ -179,4 +179,45 @@
 }
 .dark-mode .improveArea{
     background: linear-gradient(0deg, #2c6ae6 0%, #00256b 0%, #000000 60%);
+}
+
+
+
+/*paste button*/
+
+
+
+.dark-mode .paste{
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #525252;
+}
+
+.dark-mode .paste:hover{
+    background-color:#000000;
+    color: rgb(212, 212, 212);
+}
+
+
+
+
+
+
+.dark-mode .paste span:last-child {
+    color: #000000;
+  }
+
+
+.dark-mode .paste:focus {
+    background-color: #ffffff;
+    color:rgb(0, 0, 0) ;
+  }
+
+.dark-mode .paste:focus:end {
+    background-color: #000000;
+  }
+
+
+  .paste:focus span:first-child {
+    color: #000000;
 }

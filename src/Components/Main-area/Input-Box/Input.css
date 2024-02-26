@@ -6,17 +6,17 @@
 
 
     border: none;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     font-size: 16px;
     box-sizing: border-box;
 
-    outline: 1px solid rgb(0, 0, 0);
+    outline: 1px solid rgb(255, 255, 255);
 }
 
 .CodeMirror{
     display: flex;
     height: 94%;
-    width: 100%;
+    width: 99%;
     position: relative;
     overflow: hidden;
 }
@@ -24,3 +24,75 @@
     width: 100%;
     overflow: hidden;
 }
+
+  .paste {
+    position: absolute;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 15%;
+    width: 90px;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000;
+    overflow: hidden;
+    transition-duration: 700ms;
+    border: 2px solid #ffffff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.paste:hover {
+    background-color:#e7fbff;
+    color: rgb(95, 95, 95);
+}
+
+.paste:active {
+    scale: 0.95;
+}
+
+
+.paste span:first-child {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.paste span:last-child {
+    position: absolute;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(100%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+    
+}
+
+.paste:focus {
+    transition-delay: 100ms;
+    transition-duration: 500ms;
+    background-color: #000000;
+    color:rgb(255, 255, 255) ;
+}
+
+.paste:focus span:first-child {
+    color: #ffffff;
+    transform: translateX(-50%) translateY(-150%);
+    opacity: 0;
+    transition-duration: 500ms;
+}
+
+.paste:focus span:last-child {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+    transition-delay: 300ms;
+    transition-duration: 500ms;
+    
+  }
+  
+
+
+  .icon{
+    width: 50px;
+    height: 30px;
+  }

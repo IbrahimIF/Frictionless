@@ -141,3 +141,10 @@ overflow:auto;
     transition-duration: 900ms;
     
   }
+
+  .test{
+
+    position: absolute ;
+    z-index: 5;
+    
+  }
