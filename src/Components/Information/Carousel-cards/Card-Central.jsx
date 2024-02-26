@@ -7,7 +7,7 @@ import './Cards.css';
 function central() {
     return (
         <div className="carousel-wrapper">
-            <Carousel infiniteLoop>
+            <Carousel infiniteLoop showStatus={false}>
 
             <div>
                     <div className="cardArea">

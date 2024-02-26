@@ -7,12 +7,12 @@ import './Cards.css';
 function left() {
     return (
         <div className="carousel-wrapper">
-            <Carousel infiniteLoop>
+            <Carousel infiniteLoop showStatus={false}>
 
                 <div>
                     <div className="cardArea">
                         <div className="card">
-                            <div className="card-info"><p>Hover</p></div>
+                            <div className="card-info"><p className="Hover-text">Hover to see more</p></div>
                             <div className="card-back">
                                     <p className="heading">Card Hover</p>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipii</p>

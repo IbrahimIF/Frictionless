@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: linear-gradient(0deg, #1260F8 0%, #78a6fc 0%, #FFF 60%);
+    background: linear-gradient(0deg, #1260F8 0%, #78a6fc 0%, #FFF 40%);
 }
 
 .title {
@@ -115,7 +115,7 @@
 }
 
 
-.analyseArea{
+.sectionArea{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -128,28 +128,4 @@
     border-radius: 10px;
 }
 
-.detectArea{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    top: -80px;
-    height: 80%;
-    width: 100%;
-    background: linear-gradient(0deg, #1260F8 0%, #78a6fc 0%, #FFF 60%);
-    border: grey;
-    border-radius: 10px;
-}
-.improveArea{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    top: -80px;
-    height: 80%;
-    width: 100%;
-    background: linear-gradient(0deg, #1260F8 0%, #78a6fc 0%, #FFF 60%);
-    border: grey;
-    border-radius: 10px;
-}
 

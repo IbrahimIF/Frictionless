@@ -34,21 +34,21 @@ function mode() {
         <div className="belowArea">
           <div className="leftArea">
             <div className="leftCube"><img src={Cube} className="cubeSize" alt="3Dcube" /></div>
-            <div className="analyseArea">
+            <div className="sectionArea">
               <h1 className="textInfo">Analyse</h1>
               <LeftCard/>
             </div>
           </div>
           <div className="centralArea">
             <div className="centralCube"><img src={Cube} className="cubeSize" alt="3Dcube" /></div>
-            <div className="detectArea">
+            <div className="sectionArea">
               <h1 className="textInfo">Detect</h1>
               <CentralCard/>
             </div>
           </div>
           <div className="rightArea">
             <div className="rightCube"><img src={Cube} className="cubeSize" alt="3Dcube" /></div>
-            <div className="improveArea">
+            <div className="sectionArea">
               <h1 className="textInfo">Improve</h1>
               <RightCard/>
             </div>

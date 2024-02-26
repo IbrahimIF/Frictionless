@@ -183,6 +183,35 @@
 
 
 
+
+/*Card*/
+
+.dark-mode .card:before {
+    background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 25%, #ffffff 75%);
+  }
+
+.dark-mode .card-info {
+    background: #000000;
+    background: linear-gradient(to top, #68acff, #4046e3);
+}
+
+.dark-mode .card-back {
+    background: linear-gradient(-45deg, #00a6ff 0%, #4800ff 100%);
+    color: #000000;
+}
+
+
+.dark-mode .carousel .control-next.control-arrow:before {
+    color: #fff; /* Arrow color */
+
+}
+
+.dark-mode .carousel .control-prev.control-arrow:before {
+    color: #fff; /* Arrow color */
+}
+
+
+
 /*paste button*/
 
 

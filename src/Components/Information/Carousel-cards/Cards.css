@@ -29,15 +29,15 @@
 
 .carousel .control-next.control-arrow:before {
     content: '}';
-    font-size: 24px; /* Adjust the size as needed */
-    color: #fff; /* Arrow color */
+    font-size: 40px; /* Adjust the size as needed */
+    color: #000000; /* Arrow color */
     border: none; /* Remove the border styles */
 }
 
 .carousel .control-prev.control-arrow:before {
     content: '{';
-    font-size: 24px; /* Adjust the size as needed */
-    color: #fff; /* Arrow color */
+    font-size: 40px; /* Adjust the size as needed */
+    color: #000000; /* Arrow color */
     border: none; /* Remove the border styles */
 }
 
@@ -117,8 +117,8 @@
     height: 96%;
     left: 2%;
     top: 2%;
-    background: #3f3f3f;
-    background: linear-gradient(to top, #1d1d1d, #c0c0c0);
+    background: #fdfdfd;
+    background: linear-gradient(to top, #6BA8F4, #ffffff);
     border-radius: 8px;
     transition: 0.3s;
     z-index: 5;
@@ -136,7 +136,7 @@
     top: 2%;
     width: 96%;
     height: 96%;
-    background: linear-gradient(-45deg, #00a6ff 0%, #4800ff 100%);
+    background: linear-gradient(-45deg, #00a6ff 0%, #895aff 100%);
     color: #e8e8e8;
     padding: 20px;
     line-height: 1.5;
@@ -164,3 +164,7 @@
     opacity: 0;
   }
   
+
+  .Hover-text{
+  
+  }
