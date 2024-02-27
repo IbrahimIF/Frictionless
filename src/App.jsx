@@ -20,7 +20,6 @@ function App() {
   const [clearCodeTrigger, setClearCodeTrigger] = useState(false);
   const descriptionSectionRef = useRef(null);
 
-
   const clearCode = () => {
     setClearCodeTrigger(prev => !prev); // Toggle to ensure a change even if called multiple times
   };

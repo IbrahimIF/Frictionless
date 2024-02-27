@@ -15,8 +15,8 @@ import { abyss, androidstudio, andromeda, aura, bespin, copilot,githubLight, git
 
 
 function output() {
-  const { codeTheme, codeLanguage, isDarkMode, clearCodeTrigger  } = useContext(ThemeContext);
-  const [code, setCode] = useState("type here (${codeLanguage}) ");
+  const { codeTheme, codeLanguage, isDarkMode  } = useContext(ThemeContext);
+  const [code, setCode] = useState();
   const codeMirrorRef = useRef(null);
 
     // Function to determine the correct extension based on selected language
@@ -61,6 +61,7 @@ function output() {
       className="CodeMirror"
       extensions={[getLanguageExtension(codeLanguage)]}
       theme={getTheme(codeTheme)}
+      readOnly={true}
       onChange={(value, viewUpdate) => {
         setCode(value);
         console.log('value:', value);
