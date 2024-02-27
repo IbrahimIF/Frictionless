@@ -5,12 +5,22 @@
     position: relative;
     height: 50%;
     width: 100%;
+    top:-50px;
 }
 
 .carousel-root{
     width: 100%;
-}
+    height: 500%;
+  }
+  .carousel{
+    width: 100%;
+    height: 100%;
+  }
 
+.carousel .slider-wrapper {
+    /* overflow: hidden; */
+    overflow:visible;
+}
 
 .buttons {
     cursor: pointer;
@@ -28,19 +38,26 @@
 /*carousel*/
 
 .carousel .control-next.control-arrow:before {
+  position: relative;
     content: '}';
     font-size: 40px; /* Adjust the size as needed */
     color: #000000; /* Arrow color */
     border: none; /* Remove the border styles */
+    top: -50px;
 }
 
 .carousel .control-prev.control-arrow:before {
+  position: relative;
     content: '{';
     font-size: 40px; /* Adjust the size as needed */
     color: #000000; /* Arrow color */
     border: none; /* Remove the border styles */
+    top: -50px;
 }
 
+.extension{
+  height: 170%;
+}
 
 /*card*/
 
@@ -74,7 +91,7 @@
     right: -50%;
     bottom: -50%;
     left: -50%;
-    background: linear-gradient(180deg, #000000 0%, #000000 25%, #000000 75%);
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 25%, #ffffff 75%);
     border-radius: 8px;
   }
   
@@ -121,6 +138,7 @@
     background: linear-gradient(to top, #6BA8F4, #ffffff);
     border-radius: 8px;
     transition: 0.3s;
+
     z-index: 5;
   }
   
@@ -144,6 +162,8 @@
     pointer-events: none;
     transform: translateY(110%);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    font-weight: 400;
+    font-size: 14px;
     z-index: 8;
   }
   
@@ -165,6 +185,47 @@
   }
   
 
-  .Hover-text{
+  .text-body {
+    color: #000000;
+    text-align: center;
+    position: absolute;
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 80px;
+  }
+
+
+  .text-title {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(31, 31, 31, 0.64);
+    margin-top: -80px;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+
+  .button-link{
+    position: relative;
+    cursor: pointer;
+    top: 30px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 700;font-weight: 700;
+    font-size: .75rem;
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(255, 255, 255);
+    border-image: linear-gradient(100deg, #71E8FC 0%, #6BA8F4 25%, #637FE7 50%, #6455F0 75%) 1;
+    width: 50%;
+    transition-duration: 700ms
+  }
   
+
+  .button-link:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+
+  .button-link:active {
+    scale: 0.95;
   }

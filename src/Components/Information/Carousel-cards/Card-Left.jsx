@@ -6,43 +6,53 @@ import './Cards.css';
 
 function left() {
     return (
-        <div className="carousel-wrapper">
-            <Carousel infiniteLoop showStatus={false}>
+        <div className="carousel-wrapper" >
+            <Carousel infiniteLoop showStatus={false} >
 
                 <div>
                     <div className="cardArea">
                         <div className="card">
-                            <div className="card-info"><p className="Hover-text">Hover to see more</p></div>
+                            <div className="card-info">
+                                <p className="text-title">Context Analysis</p>
+                                <p className="text-body">Hover to see more</p>
+                                </div>
                             <div className="card-back">
-                                    <p className="heading">Card Hover</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipii</p>
+                                <p>Identify its purpose, where it fits in the program, and the specific function or module it's part of. Knowing the high-level objectives provides a foundation for understanding the code's intricacies.</p>
                             </div>
                         </div>
                     </div>
+                    <button className="button-link" onClick={() => window.location.href = "https://www.example.com"}>read more</button>
+                </div>
+                
+
+                <div>
+                    <div className="cardArea">
+                        <div className="card">
+                            <div className="card-info">
+                                <p className="text-title">Syntax and Patterns</p>
+                                <p className="text-body">Hover to see more</p>
+                            </div>
+                            <div className="card-back">
+                                <p>Track how variables change, observe their manipulation through various operations, and note input and output points. Tracing the execution path helps in understanding the code's logic and functionality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button className="button-link" onClick={() => window.location.href = "https://www.example.com"}>read more</button>
                 </div>
 
                 <div>
                     <div className="cardArea">
                         <div className="card">
-                            <div className="card-info"><p>Hover</p></div>
+                            <div className="card-info">
+                                <p className="text-title">Control Flow</p>
+                                <p className="text-body">Hover to see more</p>
+                            </div>
                             <div className="card-back">
-                                    <p className="heading">Card Hover</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipii</p>
+                                <p>Familiarize yourself with the language's conventions and specific features. Recognizing language-specific constructs, loops and if statments. It is crucial for understanding the code's logic and behavior.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div>
-                    <div className="cardArea">
-                        <div className="card">
-                            <div className="card-info"><p>Hover</p></div>
-                            <div className="card-back">
-                                    <p className="heading">Card Hover</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipii</p>
-                            </div>
-                        </div>
-                    </div>
+                    <button className="button-link" onClick={() => window.location.href = "https://www.example.com"}>read more</button>
                 </div>
 
             </Carousel>
