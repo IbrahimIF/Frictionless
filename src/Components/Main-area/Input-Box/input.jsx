@@ -20,8 +20,8 @@ import { abyss, androidstudio, andromeda, aura, bespin, copilot,githubLight, git
 
 
 function input() {
-  const { codeTheme, codeLanguage, isDarkMode, clearCodeTrigger  } = useContext(ThemeContext);
-  const [code, setCode] = useState("type here (${codeLanguage}) ");
+  const { codeTheme, codeLanguage, isDarkMode, clearCodeTrigger, codeValue, setCodeValue } = useContext(ThemeContext);
+  const [code, setCode] = useState("type here (${codeLanguage})");
   const [isCodeTyped, setIsCodeTyped] = useState(false);
 
   const codeMirrorRef = useRef(null);
@@ -70,6 +70,11 @@ function input() {
     setCode(`type here (${codeLanguage})`);
     setIsCodeTyped(false);
   }, [clearCodeTrigger, codeLanguage]);
+
+  useEffect(() => {
+    // Update codeValue in the context whenever code changes
+    setCodeValue(code);
+  }, [code, setCodeValue]);
 
 
   const handlePasteButtonClick = () => {

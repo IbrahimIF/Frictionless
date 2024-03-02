@@ -1,4 +1,3 @@
-
 import './mode.css';
 import '../../../../Darkmode.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,7 +11,7 @@ import React, { useContext, useEffect } from "react";
 function mode() {
 
   // Theme context
-  const { isDarkMode, setIsDarkMode} = useContext(ThemeContext);
+  const { isDarkMode, setIsDarkMode, activeMode, setActiveMode } = useContext(ThemeContext);
   const [activeButton, setActiveButton] = React.useState(null); // State to track the active button
 
 
@@ -26,14 +25,22 @@ function mode() {
     const style = isDarkMode ? "Moon" : "Sun";
 
     const handleButtonClick = (buttonName) => {
+      // If the clicked button is already active, deactivate it
+    if (activeButton === buttonName) {
+      setActiveButton(null);
+      setActiveMode(null); // Assuming null represents the absence of a mode
+    } else {
+      // Otherwise, activate the clicked button
       setActiveButton(buttonName);
+      setActiveMode(buttonName);
+    }
     };
 
   return (
     <>
       <div className="buttonTopArea">
         <div className="buttonModeArea">
-        <a className={`buttonMode ${activeButton === "Analyse" ? "active" : ""}`} id="btnAnalyse" onClick={() => handleButtonClick("Analyse")}><span className="texts"> Analyse </span></a>
+          <a className={`buttonMode ${activeButton === "Analyse" ? "active" : ""}`} id="btnAnalyse" onClick={() => handleButtonClick("Analyse")}><span className="texts"> Analyse </span></a>
           <a className={`buttonMode ${activeButton === "Detect" ? "active" : ""}`} id="btnDetect" onClick={() => handleButtonClick("Detect")}><span className="texts"> Detect </span></a>
           <a className={`buttonMode ${activeButton === "Improve" ? "active" : ""}`} id="btnImprove" onClick={() => handleButtonClick("Improve")}><span className="texts"> Improve </span></a>
         </div>
