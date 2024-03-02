@@ -8,6 +8,9 @@ import { javascript } from '@codemirror/lang-javascript';
 import { python } from '@codemirror/lang-python';
 import { java } from '@codemirror/lang-java';
 import { html } from '@codemirror/lang-html';
+import { csharp } from '@replit/codemirror-lang-csharp'
+import { rust } from '@codemirror/lang-rust'
+
 /* themes */
 import '@uiw/codemirror-themes-all';
 import { abyss, androidstudio, andromeda, aura, bespin, copilot,githubLight, githubDark, monokaiDimmed, red, solarizedDark, tomorrowNightBlue, vscodeDark } from "@uiw/codemirror-themes-all";
@@ -24,6 +27,9 @@ function defaul() {
         case 'Python': return python();
         case 'Java': return java();
         case 'HTML': return html();
+        case 'C#': return csharp();
+        case 'Rust': return rust();
+        
         // Add other cases as needed
         default: return javascript(); // Default case
       }

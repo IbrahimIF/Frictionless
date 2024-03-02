@@ -29,6 +29,8 @@ const toggleThemeDropdown = () => setThemeDropdownOpen(!themeDropdownOpen);
       <button className="dropdown" onClick={() => setCodeLanguage('Java')}>Java</button>
       <button className="dropdown" onClick={() => setCodeLanguage('HTML')}>HTML</button>
       <button className="dropdown" onClick={() => setCodeLanguage('Python')}>Python</button>
+      <button className="dropdown" onClick={() => setCodeLanguage('C#')}>C#</button>
+      <button className="dropdown" onClick={() => setCodeLanguage('Rust')}>Rust</button>
     </div>
     )}
   </button>
