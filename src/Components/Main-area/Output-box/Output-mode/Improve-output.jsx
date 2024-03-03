@@ -58,11 +58,11 @@ function improve() {
       }
     };
 
+
     useEffect(() => {
       // Respond to the updated code trigger
       setUpdatedCodeValue(codeValue);
     }, [updateTrigger]);
-
 
   return (
     <>
@@ -74,8 +74,6 @@ function improve() {
       extensions={[getLanguageExtension(codeLanguage)]}
       theme={getTheme(codeTheme)}
       readOnly={true}
-      autoCloseBrackets={true} // Automatically close brackets
-      matchBrackets={true}
       onChange={(value, viewUpdate) => {
         console.log('value:', value);
       }}

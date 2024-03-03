@@ -7,7 +7,7 @@ import './Cards.css';
 function central() {
     return (
         <div className="carousel-wrapper">
-            <Carousel infiniteLoop showStatus={false}>
+            <Carousel infiniteLoop showStatus={false} set showThumbs={false}>
 
             <div>
                     <div className="cardArea">

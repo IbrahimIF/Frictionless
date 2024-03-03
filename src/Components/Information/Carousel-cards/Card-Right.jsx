@@ -8,7 +8,7 @@ import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons';
 function right() {
     return (
         <div className="carousel-wrapper">
-            <Carousel infiniteLoop showStatus={false} >
+            <Carousel infiniteLoop showStatus={false} set showThumbs={false} >
 
             <div>
                     <div className="cardArea">
