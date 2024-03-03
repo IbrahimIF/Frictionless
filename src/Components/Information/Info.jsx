@@ -15,7 +15,7 @@ import Cube from '../../assets/Images/3D Cube.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import ThemeContext from "../Contexts/ThemeContext";
+import {ThemeContext} from "../Context/SavedChanges";
 import { useContext, useEffect } from "react";
 
 function mode() {
@@ -29,7 +29,7 @@ function mode() {
       <div className="infoArea">
         <div className="title"><img src={isDarkMode ? DarkLogo : LightLogo} className="titleSize" alt="Logo" /></div>
         <div className="textArea">
-          <p className="textInfo">A text with a text inside a text, more simplified words,<br />and more text</p>
+          <p className="textInfo">A Software tool thats there to provide assitance on understanding and improving your code,<br />and Support deticated programmers</p>
         </div>
         <div className="belowArea">
           <div className="leftArea">

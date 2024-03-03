@@ -1,7 +1,7 @@
 import './output.css';
 import '../../../Darkmode.css'
 
-import ThemeContext from '../../Contexts/ThemeContext';
+import {ThemeContext} from '../../Context/SavedChanges';
 import React, { useContext, useEffect } from "react";
 
 import Default from './Output-mode/Default-output';

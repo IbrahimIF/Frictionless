@@ -1,7 +1,8 @@
 import '../output.css'
 import React, { useState, useEffect, useRef, useContext } from "react";
 import  CodeMirror  from '@uiw/react-codemirror';
-import ThemeContext from "../../../Contexts/ThemeContext";
+import {ThemeContext} from "../../../Context/SavedChanges";
+import { useCodeMirrorContext } from '../../../Context/CodeMirrorExtension';
 
 /*langauages*/ 
 import { javascript } from '@codemirror/lang-javascript';
@@ -19,44 +20,8 @@ import { abyss, androidstudio, andromeda, aura, bespin, copilot,githubLight, git
 function analyse() {
   const { codeTheme, codeLanguage, isDarkMode, setCodeValue, codeValue, updateTrigger } = useContext(ThemeContext);
   const [updatedCodeValue, setUpdatedCodeValue] = useState("");
-  
+  const { getTheme, getLanguageExtension } = useCodeMirrorContext();
   const codeMirrorRef = useRef(null);
-
-    // Function to determine the correct extension based on selected language
-    const getLanguageExtension = (language) => {
-      switch(language) {
-        case 'Javascript': return javascript();
-        case 'Python': return python();
-        case 'Java': return java();
-        case 'HTML': return html();
-        case 'C#': return csharp();
-        case 'Rust': return rust();
-
-        // Add other cases as needed
-        default: return javascript(); // Default case
-      }
-    };
-  
-    // Function to determine the correct theme based on selection
-    const getTheme = (themeName) => {
-      switch(themeName) {
-        case 'Abyss': return abyss;
-        case 'Android Studio': return androidstudio;
-        case 'Andomeda': return andromeda;
-        case 'Aura': return aura;
-        case 'Bespin': return bespin;
-        case 'Copilot': return copilot;
-        case 'Github Light': return githubLight;
-        case 'Github Dark': return githubDark;
-        case 'Monokai Dimmed': return monokaiDimmed;
-        case 'Red': return red;
-        case 'Solarized Dark': return solarizedDark;
-        case 'Tomorrow Night Blue': return tomorrowNightBlue;
-        case 'Vscode Dark': return vscodeDark;
-        // Add cases for other themes
-        default: return isDarkMode ? githubDark : githubLight; // Default theme
-      }
-    };
 
 
     useEffect(() => {
@@ -154,7 +119,7 @@ function analyse() {
   Programming Language: ${codeLanguage ? codeLanguage : 'Unknown'}
   Theme: ${codeTheme ? codeTheme : 'Uknown'}
   ${IndentationLevel().length > 0 ? `Indentation Level: ${IndentationLevel().join(', ')}` : ''}
-  ${variablesList.length > 0 ? `List of Variable Name & Type:\n${variablesList.map((variable, index) => `${index + 1}. ${variable.variableName}: ${variable.variableType}`).join('\n')}` : ''}
+  ${variablesList.length > 0 ? `List of Variable Name and:\n${variablesList.map((variable, index) => `${index + 1}. ${variable.variableName}: ${variable.variableType}`).join('\n')}` : ''}
   
 
   # ---- Counts ---- #

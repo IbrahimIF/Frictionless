@@ -5,7 +5,7 @@ import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 
 
-import ThemeContext from "../../../Contexts/ThemeContext";
+import {ThemeContext} from "../../../Context/SavedChanges";
 import React, { useContext, useEffect } from "react";
 
 function mode() {

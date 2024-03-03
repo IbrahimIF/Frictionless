@@ -1,7 +1,7 @@
 
 import './banner.css'
 import React, { useContext } from 'react';
-import ThemeContext from "../Contexts/ThemeContext";
+import {ThemeContext} from "../Context/SavedChanges";
 
  import LightLogo from '../../assets/Images/Frictionless Logo light.png';
  import DarkLogo from '../../assets/Images/Frictionless Logo dark.png';

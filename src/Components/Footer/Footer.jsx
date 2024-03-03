@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './footer.css';
 
+
 function Footer({descriptionSectionRef}) {
   const [checked, setChecked] = useState(false);
 

@@ -1,6 +1,6 @@
 
 import './extra.css'
-import ThemeContext from '../../../Contexts/ThemeContext';
+import {ThemeContext} from '../../../Context/SavedChanges';
 import { useState, useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark,faCaretDown } from '@fortawesome/free-solid-svg-icons';
