@@ -20,9 +20,13 @@ function App() {
   const [clearCodeTrigger, setClearCodeTrigger] = useState(false);
   const [codeValue, setCodeValue] = useState("");
   const descriptionSectionRef = useRef(null);
-
+  const [updateTrigger, setUpdateTrigger] = useState(false);
   const clearCode = () => {
     setClearCodeTrigger(prev => !prev); // Toggle to ensure a change even if called multiple times
+  };
+
+  const updateCode = () => {
+    setUpdateTrigger(prev => !prev); // Toggle to ensure a change even if called multiple times
   };
 
   useEffect(() => {
@@ -36,7 +40,7 @@ function App() {
 
   return (
     <>
-     <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode,  codeTheme, setCodeTheme, codeLanguage, setCodeLanguage, clearCode, clearCodeTrigger, activeMode, setActiveMode, codeValue, setCodeValue}}>
+     <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode,  codeTheme, setCodeTheme, codeLanguage, setCodeLanguage, clearCode, clearCodeTrigger, activeMode, setActiveMode, codeValue, setCodeValue, updateTrigger, setUpdateTrigger, updateCode }}>
       <div className="main-container">
         <div className="banner-container"> <Banner /> </div>
         <div className="middle-container"> <MainArea /> </div>

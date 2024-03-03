@@ -1,5 +1,6 @@
 import './main.css';
 import '../../Darkmode.css'
+import React, { useState, useEffect, useRef, useContext } from "react";
 
 import Topbuttons from './Buttons/Button-mode/mode';
 import Input from './Input-Box/input';
@@ -16,7 +17,7 @@ function main() {
     <div className="topButtonsArea"><Topbuttons /></div>
   <Input />
   <Output />
-  <div className="bellowButtonsArea"><Bellowbuttons /></div>
+  <div className="bellowButtonsArea"><Bellowbuttons/></div>
   </div>
 </div>
     </>

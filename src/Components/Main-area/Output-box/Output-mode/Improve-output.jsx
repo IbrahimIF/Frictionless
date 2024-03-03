@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef, useContext } from "react";
 import  CodeMirror  from '@uiw/react-codemirror';
 import ThemeContext from "../../../Contexts/ThemeContext";
 
+
 /*langauages*/ 
 import { javascript } from '@codemirror/lang-javascript';
 import { python } from '@codemirror/lang-python';
@@ -17,8 +18,9 @@ import { abyss, androidstudio, andromeda, aura, bespin, copilot,githubLight, git
 
 
 function improve() {
-  const { codeTheme, codeLanguage, isDarkMode, codeValue  } = useContext(ThemeContext);
+  const { codeTheme, codeLanguage, isDarkMode, codeValue, updateTrigger  } = useContext(ThemeContext);
   const codeMirrorRef = useRef(null);
+  const [updatedCodeValue, setUpdatedCodeValue] = useState("");
 
     // Function to determine the correct extension based on selected language
     const getLanguageExtension = (language) => {
@@ -56,18 +58,25 @@ function improve() {
       }
     };
 
+    useEffect(() => {
+      // Respond to the updated code trigger
+      setUpdatedCodeValue(codeValue);
+    }, [updateTrigger]);
+
+
   return (
     <>
 <div className="output-box">
 <CodeMirror
       ref={codeMirrorRef}
-      value={codeValue}
+      value={updatedCodeValue}
       className="CodeMirror"
       extensions={[getLanguageExtension(codeLanguage)]}
       theme={getTheme(codeTheme)}
       readOnly={true}
+      autoCloseBrackets={true} // Automatically close brackets
+      matchBrackets={true}
       onChange={(value, viewUpdate) => {
-        setCode(value);
         console.log('value:', value);
       }}
     />

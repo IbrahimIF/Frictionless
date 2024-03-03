@@ -5,9 +5,9 @@ import { useState, useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark,faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
-function extra() {
+function extra({ onClick }) {
 // Theme context
-const { codeLanguage, codeTheme, setCodeTheme, setCodeLanguage, clearCode } = useContext(ThemeContext);
+const { codeLanguage, codeTheme, setCodeTheme, setCodeLanguage, clearCode, updateCode } = useContext(ThemeContext);
 
 const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
 const [themeDropdownOpen, setThemeDropdownOpen] = useState(false);
@@ -56,7 +56,7 @@ const toggleThemeDropdown = () => setThemeDropdownOpen(!themeDropdownOpen);
     </div>
     )}
   </button>
-  <button className="check-button"><span>check</span><span>done</span></button>
+  <button className="check-button"  onClick={updateCode} ><span>check</span><span>done</span></button>
 </div>
     </>
   )

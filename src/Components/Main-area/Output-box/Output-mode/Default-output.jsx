@@ -17,8 +17,9 @@ import { abyss, androidstudio, andromeda, aura, bespin, copilot,githubLight, git
 
 
 function defaul() {
-  const { codeTheme, codeLanguage, isDarkMode, codeValue} = useContext(ThemeContext);
+  const { codeTheme, codeLanguage, isDarkMode,setCodeValue, codeValue, updateTrigger} = useContext(ThemeContext);
   const codeMirrorRef = useRef(null);
+  const [updatedCodeValue, setUpdatedCodeValue] = useState("");
 
     // Function to determine the correct extension based on selected language
     const getLanguageExtension = (language) => {
@@ -56,12 +57,18 @@ function defaul() {
       }
     };
 
+
+    useEffect(() => {
+      // Respond to the updated code trigger
+      setUpdatedCodeValue(codeValue);
+    }, [updateTrigger]);
+
   return (
     <>
 <div className="output-box">
 <CodeMirror
       ref={codeMirrorRef}
-      value={codeValue}
+      value={updatedCodeValue}
       className="CodeMirror"
       extensions={[getLanguageExtension(codeLanguage)]}
       theme={getTheme(codeTheme)}
