@@ -2,6 +2,7 @@ import '../output.css'
 import React, { useState, useEffect, useRef, useContext } from "react";
 import  CodeMirror  from '@uiw/react-codemirror';
 import ThemeContext from "../../../Contexts/ThemeContext";
+import beautify from 'js-beautify'; 
 
 
 /*langauages*/ 
@@ -60,9 +61,28 @@ function improve() {
 
 
     useEffect(() => {
-      // Respond to the updated code trigger
-      setUpdatedCodeValue(codeValue);
+      // Get updated code value
+      const unformattedCode = codeValue; 
+  
+      // Format the code using js-beautify
+      const formattedCode = beautify(unformattedCode, {
+        indent_size: 4,
+        space_in_empty_paren: true,
+        indent_char: ' ',
+        indent_with_tabs: false, 
+        end_with_newline: true,
+        language: 'java'
+      });
+  
+      // Set the formatted code
+      setUpdatedCodeValue(formattedCode);
     }, [updateTrigger]);
+
+
+
+
+    
+
 
   return (
     <>
