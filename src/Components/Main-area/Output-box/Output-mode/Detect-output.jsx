@@ -5,10 +5,15 @@ import {ThemeContext} from "../../../Context/SavedChanges";
 import { useCodeMirrorContext } from '../../../Context/CodeMirrorExtension';
 
 function detect() {
-  const { codeTheme, codeLanguage, isDarkMode, codeValue  } = useContext(ThemeContext);
+  const { codeTheme, codeLanguage, isDarkMode, codeValue, clearCodeTrigger, setCodeValue } = useContext(ThemeContext);
   const codeMirrorRef = useRef(null);
+  const [updatedCodeValue, setUpdatedCodeValue] = useState("");
   const { getTheme, getLanguageExtension } = useCodeMirrorContext();
 
+  useEffect(() => {
+    // Respond to the clear code trigger
+    setCodeValue(codeValue);
+  }, [clearCodeTrigger]);
 
   return (
     <>

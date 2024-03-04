@@ -254,6 +254,39 @@
   }
 
 
-  .paste:focus span:first-child {
+ .dark-mode .paste:focus span:first-child {
     color: #000000;
 }
+
+
+/*copy button*/
+.dark-mode .copy-button {
+    border: 2px solid #0040b8;
+    background: radial-gradient(100% 100% at 100% 0%, #1400aa 0%, #001c77 100%);
+    color: #ffffff;
+}
+
+.dark-mode .copy-button:hover {
+  background: radial-gradient(100% 100% at 100% 0%, #59a1ff 0%, #596aff 100% );
+    color: rgb(0, 0, 0);
+  }
+
+
+  
+.dark-mode .copy-button span:last-child {
+    color: #b5ccf3;
+  }
+  
+.dark-mode .copy-button:focus {
+    background: radial-gradient(100% 100% at 100% 0%, #000000 0%, #000000 100% );
+    
+  }
+  
+.dark-mode .copy-button:focus span:first-child {
+    color: #b5ccf3;
+  }
+
+.dark-mode .copy-button:focus:end {
+    background-color: #ffffff;
+  }
+

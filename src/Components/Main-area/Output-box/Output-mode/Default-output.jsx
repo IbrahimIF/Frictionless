@@ -7,13 +7,17 @@ import { useCodeMirrorContext } from '../../../Context/CodeMirrorExtension';
 
 
 function defaul() {
-  const { codeTheme, codeLanguage, isDarkMode,setCodeValue, codeValue, updateTrigger} = useContext(ThemeContext);
+  const { codeTheme, codeLanguage, isDarkMode,setCodeValue, codeValue, updateTrigger, clearCodeTrigger} = useContext(ThemeContext);
   const codeMirrorRef = useRef(null);
   const [updatedCodeValue, setUpdatedCodeValue] = useState("");
   const { getTheme, getLanguageExtension } = useCodeMirrorContext();
 
 
-  
+  useEffect(() => {
+    // Respond to the clear code trigger
+    setUpdatedCodeValue(codeValue);
+  }, [clearCodeTrigger]);
+
     useEffect(() => {
       // Respond to the updated code trigger
       setUpdatedCodeValue(codeValue);

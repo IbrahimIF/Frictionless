@@ -8,12 +8,15 @@ import beautify from 'js-beautify';
 
 
 function improve() {
-  const { codeTheme, codeLanguage, isDarkMode, codeValue, updateTrigger  } = useContext(ThemeContext);
+  const { codeTheme, codeLanguage, clearCodeTrigger, codeValue, updateTrigger  } = useContext(ThemeContext);
   const codeMirrorRef = useRef(null);
   const [updatedCodeValue, setUpdatedCodeValue] = useState("");
   const { getTheme, getLanguageExtension } = useCodeMirrorContext();
 
-    
+  useEffect(() => {
+    // Respond to the clear code trigger
+    setUpdatedCodeValue(codeValue);
+  }, [clearCodeTrigger]);
 
 
     useEffect(() => {
@@ -27,7 +30,7 @@ function improve() {
         indent_char: ' ',
         indent_with_tabs: false, 
         end_with_newline: true,
-        language: 'java'
+        language: 'javascript'
       });
   
       // Set the formatted code
