@@ -11,7 +11,7 @@ export function ThemeProvider({ children }) {
   const [clearCodeTrigger, setClearCodeTrigger] = useState(false);
   const [codeValue, setCodeValue] = useState("");
   const [updateTrigger, setUpdateTrigger] = useState(false);
-  const [isModeImprove, setIsModeImprove] = useState(false);
+
 
 
   const clearCode = () => {
@@ -50,8 +50,6 @@ export function ThemeProvider({ children }) {
     updateTrigger,
     setUpdateTrigger,
     updateCode,
-    isModeImprove,
-    setIsModeImprove
   };
 
   return <ThemeContext.Provider value={contextValue}>{children}</ThemeContext.Provider>;

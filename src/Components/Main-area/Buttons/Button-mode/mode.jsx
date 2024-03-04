@@ -11,7 +11,7 @@ import React, { useContext, useEffect } from "react";
 function mode() {
 
   // Theme context
-  const { isDarkMode, setIsDarkMode, activeMode, setActiveMode, setIsModeImprove, isModeImprove } = useContext(ThemeContext);
+  const { isDarkMode, setIsDarkMode, activeMode, setActiveMode} = useContext(ThemeContext);
   const [activeButton, setActiveButton] = React.useState(null); // State to track the active button
 
 
@@ -26,20 +26,14 @@ function mode() {
 
     const handleButtonClick = (buttonName) => {
       // If the clicked button is already active, deactivate it
-      if (activeButton === buttonName) {
-        setActiveButton(null);
-        setActiveMode(null); // Assuming null represents the absence of a mode
-        setIsModeImprove((prevIsModeImprove) => false); // Set isModeImprove to false
-      } else {
-        // Otherwise, activate the clicked button
-        setActiveButton(buttonName);
-        setActiveMode(buttonName);
-        setIsModeImprove((prevIsModeImprove) => {
-          const newValue = buttonName === "Improve";
-          console.log("isModeImprove:", newValue);
-          return newValue;
-        });
-      }
+    if (activeButton === buttonName) {
+      setActiveButton(null);
+      setActiveMode(null); // Assuming null represents the absence of a mode
+    } else {
+      // Otherwise, activate the clicked button
+      setActiveButton(buttonName);
+      setActiveMode(buttonName);
+    }
     };
 
   return (

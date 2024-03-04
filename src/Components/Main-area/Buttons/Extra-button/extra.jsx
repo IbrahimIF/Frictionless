@@ -4,43 +4,24 @@ import {ThemeContext} from '../../../Context/SavedChanges';
 import React, { useState, useContext, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark,faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import { copyToClipboard } from "copy-to-clipboard";
 
-function extra({ onClick }) {
+
+function extra() {
 // Theme context
-const { codeLanguage, codeTheme, setCodeTheme, setCodeLanguage, clearCode, updateCode, isModeImprove, setIsModeImprove  } = useContext(ThemeContext);
+const { codeLanguage, codeTheme, setCodeTheme, setCodeLanguage, clearCode, updateCode} = useContext(ThemeContext);
 
 const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
 const [themeDropdownOpen, setThemeDropdownOpen] = useState(false);
-const [isCheckPressed, setIsCheckPressed] = useState(false);
 
 
 const toggleLanguageDropdown = () => setLanguageDropdownOpen(!languageDropdownOpen);
 const toggleThemeDropdown = () => setThemeDropdownOpen(!themeDropdownOpen);
 
-const handleCheckButtonClick = () => {
-  updateCode();
-  if (!isCheckPressed) {
-    setIsCheckPressed(true);
-    console.log("isCheckPressed:", isCheckPressed);
-  }
-};
-
-
-const handleClearButtonClick = () => {
-  clearCode();
-  if (isCheckPressed) {
-    setIsCheckPressed(false);
-    console.log("isCheckPressed:", isCheckPressed);
-  }
-};
-
-
 
   return (
     <>
 <div className="buttonBottomArea">
-  <button className="button"  onClick={handleClearButtonClick} >Clear All <FontAwesomeIcon icon= {faXmark} /></button>
+  <button className="button"  onClick={clearCode} >Clear All <FontAwesomeIcon icon= {faXmark} /></button>
   
   <button className="button" onClick={toggleLanguageDropdown}>{codeLanguage} <FontAwesomeIcon icon= {faCaretDown} />
   {languageDropdownOpen && (
@@ -76,11 +57,7 @@ const handleClearButtonClick = () => {
     </div>
     )}
   </button>
-  {isCheckPressed && isModeImprove && (
-  <button className="copy-button"  onClick={() => { copyToClipboard(codeMirrorRef.current.ref,state.lineNumbers,table.current,state.lineNumberStart,state.fontSize);
-  }} ><span>copy</span><span>copied</span></button>
-  )}
-  <button className="check-button" onClick={handleCheckButtonClick} ><span>check</span><span>done</span></button>
+  <button className="check-button" onClick={updateCode} ><span>check</span><span>done</span></button>
 </div>
     </>
   )
