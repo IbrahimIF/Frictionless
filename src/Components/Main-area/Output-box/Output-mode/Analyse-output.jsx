@@ -3,18 +3,8 @@ import React, { useState, useEffect, useRef, useContext } from "react";
 import  CodeMirror  from '@uiw/react-codemirror';
 import {ThemeContext} from "../../../Context/SavedChanges";
 import { useCodeMirrorContext } from '../../../Context/CodeMirrorExtension';
-
-/*langauages*/ 
-import { javascript } from '@codemirror/lang-javascript';
-import { python } from '@codemirror/lang-python';
-import { java } from '@codemirror/lang-java';
-import { html } from '@codemirror/lang-html';
-import { csharp } from '@replit/codemirror-lang-csharp'
-import { rust } from '@codemirror/lang-rust'
-
-/* themes */
-import '@uiw/codemirror-themes-all';
-import { abyss, androidstudio, andromeda, aura, bespin, copilot,githubLight, githubDark, monokaiDimmed, red, solarizedDark, tomorrowNightBlue, vscodeDark } from "@uiw/codemirror-themes-all";
+import axios from 'axios';
+const backendURL = 'http://localhost:4000'; 
 
 
 function analyse() {
@@ -23,11 +13,46 @@ function analyse() {
   const { getTheme, getLanguageExtension } = useCodeMirrorContext();
   const codeMirrorRef = useRef(null);
 
+  const [regexPatterns, setRegexPatterns] = useState([]);
+
+  
+  useEffect(() => {
+    // Fetch regex patterns from MongoDB
+    const fetchRegexPatterns = async () => {
+      try {
+        console.log('Fetching regex patterns...'); // L
+        const response = await axios.get('http://localhost:4000/AnalysisRegex'); // Update the endpoint accordingly
+        setRegexPatterns(response.data);
+        console.log('Regex patterns fetched successfully.');
+      } catch (error) {
+        console.error('Error fetching regex patterns:', error);
+      }
+    };
+
+    fetchRegexPatterns();
+  }, []);
+
+   // Use regexPatterns in your component
+   console.log('Regex Patterns:', regexPatterns);
+
 
     useEffect(() => {
       // Respond to the updated code trigger
       setUpdatedCodeValue(codeValue);
     }, [updateTrigger]);
+
+
+    // Function to get regex pattern by name from regexPatterns
+const getRegexPatternByName = (patternName) => {
+  const patternObj = regexPatterns.find((pattern) => pattern.name === patternName);
+  return patternObj ? new RegExp(patternObj.pattern, 'g') : null;
+};
+
+// Function to count occurrences based on a given regex pattern
+const countOccurrences = (regexPattern) => {
+  const matches = updatedCodeValue.match(regexPattern);
+  return matches ? matches.length : 0;
+};
 
 
     /*# ---- Main ---- #*/
@@ -42,7 +67,7 @@ function analyse() {
     };
 
     const listVariableANDtype = () => {
-      const variableTypeRegex = /\b(var|let|const)\s+([\w$]+)\s*:\s*([\w$<>]+)/g;
+      const variableTypeRegex = getRegexPatternByName('Variable Type');
       const matches = [...updatedCodeValue.matchAll(variableTypeRegex)];
     
       if (matches.length > 0) {
@@ -67,31 +92,31 @@ function analyse() {
     };
 
     const commentCount = () => {
-      const commentRegex = /\/\/.*|\/\*[\s\S]*?\*\//g;
+      const commentRegex = getRegexPatternByName('Comment');
       const comments = updatedCodeValue.match(commentRegex);
       return comments ? comments.length : 0;
     };
 
     const controlStructureCount = () => {
-      const controlStructureRegex = /\b(?:if|else|for|while|switch)\b[^]*?(\n\s*|$)/g;
+      const controlStructureRegex = getRegexPatternByName('Control Structure');
       const controlStructures = updatedCodeValue.match(controlStructureRegex);
       return controlStructures ? controlStructures.length : 0;
     };
 
     const FunctionandMethodCount = () => {
-      const functionMethodRegex = /\bfunction\b\s+[\w$]+\s*\(/g;
+      const functionMethodRegex = getRegexPatternByName('Function and Method');
       const functionsMethods = updatedCodeValue.match(functionMethodRegex);
       return functionsMethods ? functionsMethods.length : 0;
     };
   
     const errorHandlingCount = () => {
-      const tryCatchRegex = /\btry\b|\bcatch\b/g;
+      const tryCatchRegex = getRegexPatternByName('Error Handling');
       const tryCatchBlocks = updatedCodeValue.match(tryCatchRegex);
       return tryCatchBlocks ? tryCatchBlocks.length : 0;
     };
   
     const APIcallsCount = () => {
-      const apiCallRegex = /\b(fetch|axios|http)\(/g;
+      const apiCallRegex = getRegexPatternByName('API Call');
       const apiCalls = updatedCodeValue.match(apiCallRegex);
       return apiCalls ? apiCalls.length : 0;
     };
@@ -99,7 +124,7 @@ function analyse() {
     /*# ---- Cyclomatic Complexity  ---- #*/
 
 
-  const decisionPointRegex = /\bif\b|\belse\b|\bfor\b|\bwhile\b|\bcase\b|\bcatch\b|\b&&\b|\b\|\|\b/g;
+  const decisionPointRegex = getRegexPatternByName('Cyclomatic Complexity Decision Points');
   const decisionPoints = updatedCodeValue.match(decisionPointRegex);
   const nodes = updatedCodeValue.split('\n').filter(line => line.trim() !== '').length - (decisionPoints ? decisionPoints.length : 0);
   const connectedComponents = 1;
