@@ -28,6 +28,7 @@ const toggleThemeDropdown = () => setThemeDropdownOpen(!themeDropdownOpen);
     <div className="dropdown-content" style={{ display: languageDropdownOpen ? 'flex' : 'none' }}>
       <button className="dropdown" onClick={() => setCodeLanguage('Default Language')}>Default Language</button>
       <button className="dropdown" onClick={() => setCodeLanguage('Javascript')}>Javascript</button>
+      <button className="dropdown" onClick={() => setCodeLanguage('Typescript')}>Typescript</button>
       <button className="dropdown" onClick={() => setCodeLanguage('Java')}>Java</button>
       <button className="dropdown" onClick={() => setCodeLanguage('HTML')}>HTML</button>
       <button className="dropdown" onClick={() => setCodeLanguage('Python')}>Python</button>

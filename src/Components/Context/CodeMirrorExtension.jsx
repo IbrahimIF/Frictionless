@@ -38,6 +38,7 @@ import { abyss, androidstudio, andromeda, aura, bespin, copilot, githubLight, gi
     const getLanguageExtension = (language) => {
       switch (language) {
         case 'Javascript': return javascript();
+        case 'Typescript': return javascript();
         case 'Python': return python();
         case 'Java': return java();
         case 'HTML': return html();
