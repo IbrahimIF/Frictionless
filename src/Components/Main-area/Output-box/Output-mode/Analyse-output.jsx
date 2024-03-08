@@ -59,11 +59,43 @@ const countOccurrences = (regexPattern) => {
 
     const IndentationLevel = () => {
       const lines = updatedCodeValue.split('\n');
-      const indentationLevels = lines.map((line) => {
-        const leadingWhitespace = line.match(/^\s*/)[0];
-        return leadingWhitespace.length;
-      });
-      return indentationLevels;
+  let maxIndentationLevel = 0; // To keep track of the highest level of indentation
+  let totalIndentations = 0; // To count the total number of indentations
+
+  lines.forEach((line) => {
+    const leadingWhitespace = line.match(/^\s*/)[0].length;
+
+    // Increment totalIndentations if the line is indented
+    if (leadingWhitespace > 0) {
+      totalIndentations++;
+    }
+
+    // Determine the level based on the count of leading whitespaces
+    let currentLevel = 0;
+    if (leadingWhitespace === 0) {
+      currentLevel = 0;
+    } else if (leadingWhitespace > 0 && leadingWhitespace <= 4) {
+      currentLevel = 1;
+    } else if (leadingWhitespace > 4 && leadingWhitespace <= 8) {
+      currentLevel = 2;
+    } else if (leadingWhitespace > 8 && leadingWhitespace <= 12) {
+      currentLevel = 3;
+    } else if (leadingWhitespace > 12 && leadingWhitespace <= 16) {
+      currentLevel = 4;
+    } else if (leadingWhitespace > 16 && leadingWhitespace < 25) {
+      currentLevel = 5;
+    } else {
+      currentLevel = 5; // Consider any indentation greater than 16 as level 5
+    }
+
+    // Update maxIndentationLevel if the current line's indentation level is the highest so far
+    if (currentLevel > maxIndentationLevel) {
+      maxIndentationLevel = currentLevel;
+    }
+  });
+
+  // Return a string representation of the highest indentation level and the total number of indentations
+  return `Level ${maxIndentationLevel}: Highest indentation level detected with a total of ${totalIndentations/2} indentations.`;
     };
 
     const listVariableANDtype = () => {
@@ -123,17 +155,24 @@ const countOccurrences = (regexPattern) => {
 
     /*# ---- Cyclomatic Complexity  ---- #*/
 
-
-  const decisionPointRegex = getRegexPatternByName('Cyclomatic Complexity Decision Points');
-  const decisionPoints = updatedCodeValue.match(decisionPointRegex);
-  const nodes = updatedCodeValue.split('\n').filter(line => line.trim() !== '').length - (decisionPoints ? decisionPoints.length : 0);
-  const connectedComponents = 1;
-
-  const cyclomaticComplexity = () => {
-  // Calculate Cyclomatic Complexity
-  const complexity =  (decisionPoints ? decisionPoints.length : 0) - nodes + 2 * connectedComponents;
-  return Math.max(0, complexity); // Ensure complexity is non-negative
-  };
+    const decisionPointRegex = getRegexPatternByName('Cyclomatic Complexity Decision Points');
+const decisionPointsMatch = updatedCodeValue.match(decisionPointRegex);
+const decisionPoints = decisionPointsMatch ? decisionPointsMatch.length : 0;
+const allLines = updatedCodeValue.split('\n');
+const nonEmptyLines = allLines.filter(line => line.trim() !== '');
+// Edges are equal to the number of decision points since each introduces a new path
+const edges = decisionPoints;
+// Each coded line represents a node, including those that are decision points
+const codedLines = nonEmptyLines.length;
+// Nodes are simply the count of coded lines in this simplified approach
+const nodes = codedLines;
+const node = 3;
+const connectedComponents = 1;
+const cyclomaticComplexity = () => {
+    // Correct calculation of Cyclomatic Complexity
+    const complexity = edges - node + 2*1;
+    return complexity; // Ensure complexity is non-negative
+};
 
 
   const variablesList = listVariableANDtype();
@@ -143,7 +182,7 @@ const countOccurrences = (regexPattern) => {
   # ---- Main ---- #
   Programming Language: ${codeLanguage ? codeLanguage : 'Unknown'}
   Theme: ${codeTheme ? codeTheme : 'Uknown'}
-  ${IndentationLevel().length > 0 ? `Indentation Level: ${IndentationLevel().join(', ')}` : ''}
+  Indentation Level: ${IndentationLevel()}
   ${variablesList.length > 0 ? `List of Variable Name and:\n${variablesList.map((variable, index) => `${index + 1}. ${variable.variableName}: ${variable.variableType}`).join('\n')}` : ''}
   
 

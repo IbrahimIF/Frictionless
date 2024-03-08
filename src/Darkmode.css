@@ -1,3 +1,9 @@
+.dark-mode * {
+    scrollbar-width: thin; /* can be "auto" or "thin" */
+    scrollbar-color: #888 #000000; /* thumb and track color */
+}
+
+
 /*App.jsx file Darkmode*/
 
 .dark-mode .main-container{
