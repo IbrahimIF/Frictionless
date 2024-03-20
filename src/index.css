@@ -1,24 +1,22 @@
-/* include border and padding in element width and height */
-* {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    scrollbar-width: thin; /* can be "auto" or "thin" */
-    scrollbar-color: #888 #ffffff; /* thumb and track color */
-  }
-  
 
-body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* hides a scroll bar if present */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scrollbar-width: thin; /*makes scroll bar thin*/
+  scrollbar-color: #888 #ffffff; /*changes scrollbar background and scroll colour*/
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* hides a scroll bar for the body*/
+}
 
+/*global CSS for both output-box and input-box*/
 .output-box, .input-box{
   align-items: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
   height: 50vh;
 }

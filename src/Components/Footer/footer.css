@@ -1,79 +1,104 @@
+              /*footer container*/
 .footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 6vh;
-   }
-   
-   .footer-button-container {
-    position: absolute;
-    width: 50%;
-    height: 6vh;
-   }
-   
-   .footer-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-    font-size: 30px;
-    user-select: none;
-    fill: #a5a5b0;
+  /* Flex */
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
 
-    top: 30px;
-   }
-   
-   .footer-button .chevron-down {
-    position: absolute;
-    animation: keyframes-return .5s;
-   }
-   
-   .footer-button input:checked ~ .chevron-down {
-    animation: keyframes-rotate .5s;
-    transform: rotate(180deg);
-   }
-   
-   .footer-button input {
-    position: absolute;
+  /* Position */
+  position: absolute;
+
+  /* Dimension */
+  width: 100%;
+  height: 6vh;
+}
+                          /*footer button container*/
+.footer-button-container {
+  /* Position */
+  position: absolute;
+
+  /* Dimension */
+  width: 50%;
+  height: 6vh;
+}
+                /*footer button*/
+.footer-button {
+  /* Flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Position */
+  position: relative;
+
+  /* Design */
+  cursor: pointer;
+  font-size: 30px;
+  user-select: none;
+  fill: #a5a5b0;
+  top: 30px;
+}
+
+                          /*arrow button for footer*/
+.footer-button .chevron-down {
+  /* Position */
+  position: absolute;
+
+  /* Animation */
+  animation: keyframes-return .5s;
+}
+
+                          /*arrow button animation for footer*/
+.footer-button input:checked ~ .chevron-down {
+  /* Design */
+  transform: rotate(180deg);
+
+  /* Animation */
+  animation: keyframes-rotate .5s;
+}
+
+                        /*arrow button for footer*/
+.footer-button input {
+  /* Position */
+  position: absolute;
+
+  /* Dimension */
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+                  /*hides info area below footer area of main area*/
+.hidden-section {
+  /* Dimension */
+  height: 100vh;
+
+  /* Flex */
+  display: none;
+}
+
+
+/* Animation Keyframes for the arrow button flipping */
+@keyframes keyframes-rotate {
+  from {
+    transform: rotate(0deg);
     opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-   }
-   
-   @keyframes keyframes-rotate {
-     0% {
-       transform: rotate(0deg);
-       opacity: 0;
-    }
-   
-     100% {
-       transform: rotate(-180deg);
-    }
-   }
-   
-   @keyframes keyframes-return {
-     0% {
-       transform: rotate(-180deg);
-       opacity: 0;
-    }
-   
-     100% {
-       transform: rotate(0deg);
-    }
-   }
-
-
-
-
-   .hidden-section {
-    height: 100vh;
-    display: none;
   }
+  to {
+    transform: rotate(-180deg);
+  }
+}
 
+@keyframes keyframes-return {
+  from {
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 
 

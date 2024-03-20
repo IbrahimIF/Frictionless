@@ -1,45 +1,60 @@
+/*Input area*/
 .input-box {
+    overflow: hidden;
+
+    /*Flex*/
     display: flex;
     justify-content: center;
-    overflow: hidden;
+
+    /*Design*/
     width: 50%;
-
-
     border: none;
     background-color: #ffffff;
     font-size: 16px;
     box-sizing: border-box;
-
     outline: 1px solid rgb(255, 255, 255);
 }
 
+
+/*Code mirror css changes*/
 .CodeMirror{
+    overflow: hidden;
     display: flex;
+
+    position: relative;
     height: 94%;
     width: 99%;
-    position: relative;
-    overflow: hidden;
 }
 .cm-editor{
-    width: 100%;
     overflow: hidden;
+    width: 100%;
 }
 
-  .paste {
-    position: absolute;
-    background-color: #ffffff;
+
+/*Paste button*/
+.paste {
     cursor: pointer;
-    transition: all 0.2s ease;
+    overflow: hidden;
+
+    /*Position*/
+    position: absolute;
+
+    /*Dimension*/
     height: 15%;
     width: 90px;
+
+    /*Design*/
+    background-color: #ffffff;
     border-radius: 0.5rem;
     font-size: 0.75rem;
     font-weight: 600;
     color: #000000;
-    overflow: hidden;
-    transition-duration: 700ms;
     border: 2px solid #ffffff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    /*Animation*/
+    transition: all 0.2s ease;
+    transition-duration: 700ms;
 }
 
 .paste:hover {
@@ -87,11 +102,10 @@
     opacity: 1;
     transition-delay: 300ms;
     transition-duration: 500ms;
-    
-  }
-  
+}
 
 
+/*paste button clinbpard Icon css*/
   .icon{
     width: 50px;
     height: 30px;

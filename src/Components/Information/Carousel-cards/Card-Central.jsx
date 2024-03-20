@@ -4,6 +4,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './Cards.css';
 
 
+
+/*center area for carousel card,  Detect*/
 function central() {
     return (
         <div className="carousel-wrapper">

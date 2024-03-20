@@ -1,24 +1,26 @@
 
-/*choose mode button css bellow*/
-
 .buttonTopArea{
     display: flex;
     width: 100%;
     height: 100%;
 }
 
-
 .buttonModeArea{
+    /* Flex */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 
+    /* Position */
     position: absolute;
-    width: 50%;
-    height: 5vh;
     left: 50px;
     top: 4px;
 
+    /* Dimension */
+    width: 50%;
+    height: 5vh;
+
+    /* Design */
     background-color: white;
     border-radius: 3rem;
     outline: 2.3px solid  #6BA8F4;
@@ -27,23 +29,28 @@
 
 
 .buttonMode{
+    /* Flex */
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 9999px;
+    /*Dimension*/
     width: 30%;
+
+    /* Design */
+    border-radius: 9999px;
     background-color: rgb(255, 255, 255);
     text-align: center;
     color: rgb(0, 0, 0);
     outline: 0;
-    transition: all  .2s ease;
     text-decoration: none;
+
+    /*Transition*/
+    transition: all  .2s ease;
 }
 
 .buttonMode:hover {
     color: rgb(255, 255, 255);
-
     background: linear-gradient(150deg, #2c6ae6 0%, #00256b 0%, #000000 20%);
     outline: 3px solid #1c4dff;
 }
@@ -68,37 +75,41 @@
 }
 
 
-/*dark-mode button css bellow*/
+/*css for dark-mode button bellow*/
 
 .container-dark input{
     display: none;
 }
 
 .container-dark  {
+    /*Flex*/
     display: flex;
     flex-wrap: wrap;
 
+    /*Position*/
     position: absolute;
+    top: 2px;
     left: 80%;
     width: 6%;
     height: 5.5vh;
-    top: 2px;
-    
 }
 
 
 .darkMode {
+    cursor: pointer;
+
+    /* Flex */
     display: flex;
     align-items: center;
     justify-content: center;
 
+    /*position*/
     position: absolute;
     width: 47px;
     height: 47px;
 
+    /*design*/
     border-radius: 50%;
-    cursor: pointer;
-
     background-image: linear-gradient(145deg, #ecebeb, #d0cbd3);
     border: 4px solid #f0efef;
     box-sizing: border-box;
@@ -107,14 +118,20 @@
 }
 
 .darkMode::before {
-    position: absolute;
     content: "";
+
+    /*Position*/
+    position: absolute;
+    z-index: -1;
+
+    /*dimension*/
     width: 3rem;
     height: 3rem;
+
+    /*Design*/
     border-radius: inherit;
     background-color: transparent;
     background-image: linear-gradient(145deg, #dfdede, #a7a6a6);
-    z-index: -1;
     box-shadow: 11px 11px 22px #e2e2e2, -11px -11px 22px #bdbdbd;
 }
 
@@ -127,17 +144,18 @@
     background-color: transparent;
 }
 
+/*the darkmode button is a check-button rather then a normal button allowing for toggle*/
 #checkbox:checked + .darkMode::before {
     background-image: linear-gradient(145deg, #262626, #606060);
     z-index: -1;
     box-shadow: 11px 11px 22px #141414, -11px -11px 22px #525252;
 }
 
-
+/*Logo sizes for the dark-mode button*/
 .Sun{
-height: 20px;
-width: 20px;
-color: #000000;
+    height: 20px;
+    width: 20px;
+    color: #000000;
 }
 
 .Moon{

@@ -1,18 +1,16 @@
+/*index.css*/
 .dark-mode * {
-    scrollbar-width: thin; /* can be "auto" or "thin" */
-    scrollbar-color: #888 #000000; /* thumb and track color */
+    scrollbar-width: thin; 
+    scrollbar-color: #888 #000000;
 }
 
 
 /*App.jsx file Darkmode*/
-
 .dark-mode .main-container{
     background: linear-gradient(150deg, #2c6ae6 0%, #00256b 0%, #000000 20%);
 }
 
 /*main.jsx file Darkmode*/
-
-
 .dark-mode .mainArea{
     background-color: rgb(0, 0, 0);
     outline: 1px solid rgb(0, 0, 0);
@@ -20,7 +18,6 @@
 }
 
 .dark-mode .middleArea{
-
     background-color: rgb(0, 0, 0);
     outline: 1px solid rgb(0, 0, 0);
 }
@@ -42,7 +39,6 @@
 }
 
 /*output.jsx file Darkmode*/
-
 .dark-mode .output-box {
     background-color: #000000;
     outline: 1px solid rgb(0, 0, 0);
@@ -50,29 +46,26 @@
 
 
 
-
-
 /*dropdown menu*/
-
 .dropdown-content {
     background-color: #000000;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  }
+}
 
 .dark-mode .dropdown {
     color: #ffffff;
     background-color: #000000;
-  }
-  
+}
+
 .dark-mode  .dropdown:hover {
     background-color: #ffffff;
     color: #212121;
-  }
-  
+}
+
 .dark-mode .dropdown:focus {
     background-color: #212121;
     color: #ffffff;
-  }
+}
 
 
 
@@ -132,7 +125,7 @@
 .dark-mode .button:hover{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-  }
+}
 
 .dark-mode .check-button{
     border: 2px solid #098e00;
@@ -151,20 +144,20 @@
 
 .dark-mode .check-button span:last-child {
     color: #000000;
-  }
+}
 
 
 .dark-mode .check-button:focus {
     background: radial-gradient(100% 100% at 100% 0%, #ffffff 0%, #ffffff 100% );
-  }
+}
 
 .dark-mode .check-button:focus:end {
     background-color: #000000;
-  }
+}
 
 
 
-  /*info sectio*/
+/*info sectio*/
 
 .dark-mode .infoArea{
     background: linear-gradient(0deg, #2c6ae6 0%, #00256b 0%, #000000 50%);
@@ -186,7 +179,7 @@
 
 .dark-mode .card:before {
     background: linear-gradient(180deg, #000000 0%, #000000 25%, #000000 75%);
-  }
+}
 
 .dark-mode .card-info {
     background: #000000;
@@ -211,7 +204,7 @@
 
 .text-title {
     color: rgba(255, 255, 255, 0.64);
-  }
+}
 
 .dark-mode .button-link{
     color: rgb(255 255 255);
@@ -227,8 +220,6 @@
 
 /*paste button*/
 
-
-
 .dark-mode .paste{
     background-color: #000000;
     color: #ffffff;
@@ -242,57 +233,23 @@
 
 
 
-
-
-
 .dark-mode .paste span:last-child {
     color: #000000;
-  }
+}
 
 
 .dark-mode .paste:focus {
     background-color: #ffffff;
     color:rgb(0, 0, 0) ;
-  }
+}
 
 .dark-mode .paste:focus:end {
     background-color: #000000;
-  }
+}
 
 
- .dark-mode .paste:focus span:first-child {
+.dark-mode .paste:focus span:first-child {
     color: #000000;
 }
 
-
-/*copy button*/
-.dark-mode .copy-button {
-    border: 2px solid #0040b8;
-    background: radial-gradient(100% 100% at 100% 0%, #1400aa 0%, #001c77 100%);
-    color: #ffffff;
-}
-
-.dark-mode .copy-button:hover {
-  background: radial-gradient(100% 100% at 100% 0%, #59a1ff 0%, #596aff 100% );
-    color: rgb(0, 0, 0);
-  }
-
-
-  
-.dark-mode .copy-button span:last-child {
-    color: #b5ccf3;
-  }
-  
-.dark-mode .copy-button:focus {
-    background: radial-gradient(100% 100% at 100% 0%, #000000 0%, #000000 100% );
-    
-  }
-  
-.dark-mode .copy-button:focus span:first-child {
-    color: #b5ccf3;
-  }
-
-.dark-mode .copy-button:focus:end {
-    background-color: #ffffff;
-  }
 

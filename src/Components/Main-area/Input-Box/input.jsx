@@ -1,27 +1,25 @@
+import React, { useState, useEffect, useRef, useContext } from "react";
+import {ThemeContext} from "../../Context/SavedChanges";
+
+import  CodeMirror  from '@uiw/react-codemirror';
+import { useCodeMirrorContext } from '../../Context/CodeMirrorExtension';
 
 import "./Input.css";
-import React, { useState, useEffect, useRef, useContext } from "react";
-import  CodeMirror  from '@uiw/react-codemirror';
-import {ThemeContext} from "../../Context/SavedChanges";
-import { useCodeMirrorContext } from '../../Context/CodeMirrorExtension';
-/* icons */
+
+/* Font awseome Icon */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClipboard } from '@fortawesome/free-regular-svg-icons';
 
 
-
-
 function input() {
-  const { codeTheme, codeLanguage, isDarkMode, clearCodeTrigger, codeValue, setCodeValue } = useContext(ThemeContext);
-  const [code, setCode] = useState("type here (${codeLanguage})");
+  const { codeTheme, codeLanguage, clearCodeTrigger, setCodeValue } = useContext(ThemeContext);
+  const [code, setCode] = useState("type here (${codeLanguage})"); /*sets default value as type here*/
   const [isCodeTyped, setIsCodeTyped] = useState(false);
   const { getTheme, getLanguageExtension } = useCodeMirrorContext();
-
   const codeMirrorRef = useRef(null);
 
-
-
-  useEffect(() => {  // Update the initial value whenever the selected language changes
+// Update the codeLanguage value whenever the selected language changes
+  useEffect(() => {  
     setCode(`type here (${codeLanguage})`);
     setIsCodeTyped(false);
   }, [codeLanguage]);
@@ -37,7 +35,7 @@ function input() {
     setCodeValue(code);
   }, [code, setCodeValue]);
 
-
+  /*Whenever paste button is pressed code value is updated*/
   const handlePasteButtonClick = () => {
     navigator.clipboard.readText().then((clipboardData) => {
       // Update CodeMirror value with clipboard data
@@ -45,26 +43,27 @@ function input() {
       setIsCodeTyped(true);
     });
   };
+  
 
   return (
     <>
-<div className="input-box">
-<CodeMirror
-      ref={codeMirrorRef}
-      value={code}
-      className="CodeMirror"
-      extensions={[getLanguageExtension(codeLanguage)]}
-      theme={getTheme(codeTheme)}
-      onChange={(value, viewUpdate) => {
-        setCode(value);
-        setIsCodeTyped(value !== `type here (${codeLanguage})`);
-        console.log('value:', value);
-      }}
-    />
-    {!isCodeTyped && (
-    <button className="paste" onClick={handlePasteButtonClick}><span><FontAwesomeIcon className="icon" icon= {faClipboard} /> <br/><br/> paste code</span> <span>done</span></button>
-    )}
-    </div>
+      <div className="input-box">
+        <CodeMirror
+        ref={codeMirrorRef}
+        value={code}
+        className="CodeMirror"
+        extensions={[getLanguageExtension(codeLanguage)]}
+        theme={getTheme(codeTheme)}
+        onChange={(value, viewUpdate) => {
+          setCode(value);
+          setIsCodeTyped(value !== `type here (${codeLanguage})`);
+          console.log('value:', value);
+        }}
+        />
+        {!isCodeTyped && (
+          <button className="paste" onClick={handlePasteButtonClick}><span><FontAwesomeIcon className="icon" icon= {faClipboard} /> <br/><br/> paste code</span> <span>done</span></button>
+        )}
+      </div>
     </>
   )
 }

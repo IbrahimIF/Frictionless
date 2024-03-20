@@ -1,6 +1,6 @@
-// ThemeContext.js
 import React, { createContext, useState, useEffect} from "react";
 
+/*savedChanges.jsx is used for global usage of variables and these changes are kept when page refreshes*/
 export const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
@@ -12,8 +12,6 @@ export function ThemeProvider({ children }) {
   const [codeValue, setCodeValue] = useState("");
   const [updateTrigger, setUpdateTrigger] = useState(false);
 
-
-
   const clearCode = () => {
     setClearCodeTrigger((prev) => !prev); // Toggle to ensure a change even if called multiple times
   };
@@ -21,10 +19,6 @@ export function ThemeProvider({ children }) {
   const updateCode = () => {
     setUpdateTrigger((prev) => !prev); // Toggle to ensure a change even if called multiple times
   };
-
-
-
-  
 
   useEffect(() => {
     localStorage.setItem("isDarkMode", isDarkMode);

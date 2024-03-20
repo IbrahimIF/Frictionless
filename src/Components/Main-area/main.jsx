@@ -1,27 +1,25 @@
 import './main.css';
 import '../../Darkmode.css'
-import React, { useState, useEffect, useRef, useContext } from "react";
 
-import Topbuttons from './Buttons/Button-mode/mode';
+import Topbuttons from './Buttons/Button-mode/mode'; 
 import Input from './Input-Box/input';
 import Output from './Output-box/output';
 import Bellowbuttons from './Buttons/Extra-button/extra';
 
 
 function main() {
-
   return (
     <>
-<div className="mainArea">
-  <div className="middleArea">
-    <div className="topButtonsArea"><Topbuttons /></div>
-  <Input />
-  <Output />
-  <div className="bellowButtonsArea"><Bellowbuttons/></div>
-  </div>
-</div>
+      <div className="mainArea">
+        <div className="middleArea">
+          <div className="topButtonsArea"><Topbuttons /></div>
+          <Input />
+          <Output />
+          <div className="bellowButtonsArea"><Bellowbuttons /></div>
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default main
+export default main;

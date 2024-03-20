@@ -1,21 +1,27 @@
+            /* Banner */
 .banner {
+    /* Flex */
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     
+    /* Position */
     position: absolute;
+
+    /* Dimension */
     height: 15vh;
     width: 100%;
   }
 
-
+            /* Banner Size */
   .bannersize{
-
+    /* Flex */
     display: flex;
     flex-wrap: wrap;
 
+    /* Position */
     position: absolute;
+    /* Dimension */
     height: 16vh;
-
   }

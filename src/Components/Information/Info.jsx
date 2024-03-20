@@ -1,28 +1,21 @@
-
-
+import React, { useContext } from "react";
+import { ThemeContext } from "../Context/SavedChanges";
 
 import './Info.css';
 import '../../Darkmode.css';
 
-import LightLogo from '../../assets/Images/Frictionless Logo light.png';
-import DarkLogo from '../../assets/Images/Frictionless Logo dark.png';
 import LeftCard from './Carousel-cards/Card-Left';
 import CentralCard from './Carousel-cards/Card-Central';
 import RightCard from './Carousel-cards/Card-Right';
 
-
+/* Images */
+import LightLogo from '../../assets/Images/Frictionless Logo light.png';
+import DarkLogo from '../../assets/Images/Frictionless Logo dark.png';
 import Cube from '../../assets/Images/3D Cube.png';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import {ThemeContext} from "../Context/SavedChanges";
-import { useContext, useEffect } from "react";
-
-function mode() {
-
-  const { isDarkMode, setIsDarkMode} = useContext(ThemeContext);
-  
-
+function info() {
+const { isDarkMode } = useContext(ThemeContext);
 
   return (
     <>
@@ -59,4 +52,4 @@ function mode() {
   )
 }
 
-export default mode
+export default info

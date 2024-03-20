@@ -8,7 +8,14 @@ const analysisRegexSchema = new Schema({
    description: { type: String, required: true },
 })
 
+const detectRegexSchema = new Schema({
+   name: { type: String, required: true },
+   pattern: { type: String, required: true },
+   description: { type: String, required: true },
+})
 
 const AnalysisRegex = mongoose.model('analysisRegex', analysisRegexSchema);
+const DetectRegex = mongoose.model('detectRegex', detectRegexSchema);
 
 module.exports = AnalysisRegex;
+module.exports = DetectRegex;

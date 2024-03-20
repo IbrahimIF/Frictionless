@@ -4,6 +4,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './Cards.css';
 
 
+
+/*Left area for carousel card,  Analyse*/
 function left() {
     return (
         <div className="carousel-wrapper" >

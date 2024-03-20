@@ -1,47 +1,64 @@
-
-/*Containers*/
+                        /*Main*/
 .main-container{
+  /* Flex */
   display: flex;
   flex-wrap: wrap;
-  
   justify-content: center;
+
+  /* Dimension */
   height: 100%;
   width: 100%;
-  background: linear-gradient(150deg, #1260F8 0%, #78a6fc 0%, #FFF 20%);
+
+  /* Design */
+  background: linear-gradient(150deg, #1260F8 0%, #78a6fc 0%, #FFF 20%); /*gradient used*/
 }
 
+                        /*Banner*/
 .banner-container{
+  /* Flex */
   display: flex;
   flex-wrap: wrap;
 
-  width: 100%;
+  /* Dimension */
   height: 14vh;
+  width: 100%;
 }
 
+                        /*Middle*/
 .middle-container{
+  /* Flex */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
-  width: 100%;
+  /* Dimension */
   height: 80vh;
+  width: 100%;
 }
 
 
+                        /*Footer*/
 .footer-container{
+  /* Flex */
   display: flex;
   flex-wrap: wrap;
 
+  /* Dimension */
   width: 100%;
   height: 6vh;
 }
 
+                        /*Description*/
 .description-container{
+  /* Flex */
   display: flex;
   flex-wrap: wrap;
-
+  
+  /* Dimension */
   width: 100%;
   height: 94vh;
+
+  /* Design */
   outline: 2px solid #1260F8;
 }
 

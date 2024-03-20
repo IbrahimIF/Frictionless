@@ -1,34 +1,36 @@
+import React, { useContext, useEffect } from "react";
+import {ThemeContext} from "../../../Context/SavedChanges";
+
 import './mode.css';
 import '../../../../Darkmode.css';
+
+/*FontAwesomeIcon imports */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 
-
-import {ThemeContext} from "../../../Context/SavedChanges";
-import React, { useContext, useEffect } from "react";
-
 function mode() {
 
   // Theme context
-  const { isDarkMode, setIsDarkMode, activeMode, setActiveMode} = useContext(ThemeContext);
+  const { isDarkMode, setIsDarkMode, setActiveMode} = useContext(ThemeContext);
+  // setActiveMode used to save what mode is set so other parts of the system know.
   const [activeButton, setActiveButton] = React.useState(null); // State to track the active button
-
-
 
     // Toggle dark mode
     useEffect(() => {
       document.body.classList.toggle("dark-mode", isDarkMode);
     }, [isDarkMode]);
 
-    const icons = isDarkMode ? faMoon : faSun;
-    const style = isDarkMode ? "Moon" : "Sun";
+    const icons = isDarkMode ? faMoon : faSun; /*change dark-mode or light-mode logo when pressed */
+    const style = isDarkMode ? "Moon" : "Sun"; /*change dark-mode or light-mode logo when pressed */
 
+    // handleButtonClick is used so the buttons below become a toggle, 
+    // only one button can be toggle at a time.
     const handleButtonClick = (buttonName) => {
       // If the clicked button is already active, deactivate it
     if (activeButton === buttonName) {
       setActiveButton(null);
-      setActiveMode(null); // Assuming null represents the absence of a mode
+      setActiveMode(null); 
     } else {
       // Otherwise, activate the clicked button
       setActiveButton(buttonName);

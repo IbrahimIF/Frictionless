@@ -2,9 +2,10 @@ import React from "react";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './Cards.css';
-import { faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
+
+
+/*Right area for carousel card,  Improve*/
 function right() {
     return (
         <div className="carousel-wrapper">
