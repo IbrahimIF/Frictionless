@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { ThemeProvider } from "./Components/Context/SavedChanges";
-
+import { Analytics } from "@vercel/analytics/react"
 
 import './App.css'
 import './Darkmode.css'
@@ -23,6 +23,7 @@ function App() {
         <div className="footer-container"> <Footer descriptionSectionRef={descriptionSectionRef} /> </div>
         <div ref={descriptionSectionRef} className="description-container"><Info /></div>
       </div>
+      <Analytics />
     </ThemeProvider>
     </>
   )
