@@ -16,15 +16,15 @@ function App() {
   const descriptionSectionRef = useRef(null); 
   return (
     <>
-    <Analytics/>
-     <ThemeProvider>
+    <ThemeProvider>
+      <Analytics/>
       <div className="main-container">
         <div className="banner-container"> <Banner /> </div>
         <div className="middle-container"> <MainArea /> </div>
         <div className="footer-container"> <Footer descriptionSectionRef={descriptionSectionRef} /> </div>
         <div ref={descriptionSectionRef} className="description-container"><Info /></div>
       </div>
-</ThemeProvider>
+    </ThemeProvider>
     </>
   )
 }
