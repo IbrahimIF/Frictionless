@@ -1,4 +1,4 @@
- /*file created to easily make data that would be inserted into the database */
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema
 

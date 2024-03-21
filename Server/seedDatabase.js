@@ -4,8 +4,6 @@ const DetectRegex = require('./models/schemas');
 require('dotenv/config')
 
 
-
-// The regexPatterns array defined in step 1
 const regexPatterns = [
   {
     name: 'Variable Type',
@@ -44,7 +42,6 @@ const regexPatterns = [
   },
 ];
 
-// The regexPatterns array defined in step 1
 const DetectregexPatterns = [
   // Javascript and TypeScript
   {
@@ -231,13 +228,12 @@ const seedDatabase = async () => {
     await mongoose.connect(process.env.DB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      dbName: 'frictionless_db', // Make sure it matches the database name
+      dbName: 'frictionless_db', 
     });
     console.log('Connected to the database.');
 
     console.log('Clearing existing patterns...');
 
-    console.log('Clearing existing patterns...');
     // Clear existing patterns
     await AnalysisRegex.deleteMany({});
     await DetectRegex.deleteMany({});
@@ -246,10 +242,9 @@ const seedDatabase = async () => {
 
     console.log('Inserting new patterns...');
     // Insert new patterns
-    const newPatterns = regexPatterns.map((pattern) => pattern); // Assuming your patterns are in the correct format
+    const newPatterns = regexPatterns.map((pattern) => pattern);
     await AnalysisRegex.insertMany(newPatterns);
 
-    // Assuming you have a DetectregexPatterns array ready
     await DetectRegex.insertMany(DetectregexPatterns);
     console.log('DetectRegex patterns inserted successfully.');
 
