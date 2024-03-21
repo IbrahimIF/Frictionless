@@ -3,7 +3,7 @@ import { ThemeProvider } from "./Components/Context/SavedChanges";
 
 import './App.css'
 import './Darkmode.css'
-import { Analytics } from "@vercel/analytics/react"
+
 
 import Banner from './Components/Banner/banner';
 import MainArea from './Components/Main-area/main';
