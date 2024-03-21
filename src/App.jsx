@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { ThemeProvider } from "./Components/Context/SavedChanges";
-import { Analytics } from "@vercel/analytics/react"
+
 
 import './App.css'
 import './Darkmode.css'
@@ -17,7 +17,6 @@ function App() {
   return (
     <>
     <ThemeProvider>
-      <Analytics/>
       <div className="main-container">
         <div className="banner-container"> <Banner /> </div>
         <div className="middle-container"> <MainArea /> </div>
