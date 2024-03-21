@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { ThemeProvider } from "./Components/Context/SavedChanges";
+import { Analytics } from "@vercel/analytics/react"
 
 import './App.css'
 import './Darkmode.css'
-
 
 import Banner from './Components/Banner/banner';
 import MainArea from './Components/Main-area/main';
@@ -16,6 +16,7 @@ function App() {
   const descriptionSectionRef = useRef(null); 
   return (
     <>
+    <Analytics/>
      <ThemeProvider>
       <div className="main-container">
         <div className="banner-container"> <Banner /> </div>
