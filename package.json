@@ -26,6 +26,7 @@
     "@uiw/codemirror-theme-tokyo-night": "^4.21.21",
     "@uiw/codemirror-themes-all": "^4.21.21",
     "@uiw/react-codemirror": "^4.21.24",
+    "@vercel/analytics": "^1.2.2",
     "axios": "^1.6.7",
     "browser-or-node": "^3.0.0-pre.0",
     "copy-to-clipboard": "^3.3.3",
