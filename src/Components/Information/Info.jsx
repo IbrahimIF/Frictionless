@@ -22,7 +22,7 @@ const { isDarkMode } = useContext(ThemeContext);
       <div className="infoArea">
         <div className="title"><img src={isDarkMode ? DarkLogo : LightLogo} className="titleSize" alt="Logo" /></div>
         <div className="textArea">
-          <p className="textInfo">A Software tool thats there to provide assitance on understanding and improving your code,<br />and Support deticated programmers</p>
+          <p className="textInfo">A Software tool thats there to provide assitance on understanding and improving your code,<br />and Support dedicated programmers</p>
         </div>
         <div className="belowArea">
           <div className="leftArea">
