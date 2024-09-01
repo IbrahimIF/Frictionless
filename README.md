@@ -44,7 +44,7 @@ This Project includes:
 -----
 ## Technologies and Tools Utilised:
 
-[![My Skills](https://skillicons.dev/icons?i=react,js,html,css,vite,mongodb,express,nodejs&perline=1)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,js,html,css,vite,mongodb,express,nodejs,vscode&perline=2)](https://skillicons.dev)
 
 ------
 ## Acknowledgment:
